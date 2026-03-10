@@ -71,6 +71,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 4 reference docs: pipeline-design.md, security-practices.md, deployment-patterns.md, measurement.md
   - Content: Canonical pipeline stages, test pyramid, branching strategies, artifact management, deployment patterns (blue-green, canary, rolling, GitOps, IaC), security practices, DORA metrics, observability, incident recovery
 
+#### Cloud & General CLI Tools (4 skills migrated from llm-shared-skills)
+
+- **docker** skill: Build, run, and manage Docker containers and images
+  - 10 reference files + scripts and assets
+  - Content: Dockerfile authoring, image building, container lifecycle, networking, volumes, Docker Compose, registry operations, multi-stage builds, security best practices
+  - Cross-platform coverage: Linux, macOS, Windows, WSL2
+
+- **aws** skill: AWS CLI for cloud infrastructure operations
+  - 5 reference files + scripts
+  - Content: EC2, S3, CloudFormation, IAM, ECS, deployment patterns, credential management
+  - Cross-platform coverage: Linux, macOS, Windows, WSL2
+
+- **az** skill: Azure CLI for Azure resource management
+  - 5 reference files + scripts
+  - Content: Resource groups, VMs, container registries, AKS, app service deployments
+  - Cross-platform coverage: Linux, macOS, Windows, WSL2
+
+- **glab** skill: GitLab CLI for repository and pipeline operations
+  - 5 reference files + scripts
+  - Content: Issues, merge requests, pipelines, variables, CI/CD operations, authentication
+
 ### Previously Added
 
 - yaml-linting skill: Docker-based YAML linting with yamllint (pipelinecomponents/yamllint)

@@ -3,10 +3,10 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Nineteen skills implemented: eight platform CI/CD workflow skills
-> (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four documentation lookup skills,
-> one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP). All skills use the shared `SKILL.md` format,
-> making them loadable by either agent without modification.
+> **Status:** Active CI/CD skills collection. Twenty-three skills implemented: eight platform CI/CD workflow skills
+> (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
+> four documentation lookup skills, one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
+> All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
 ## Skills
 
@@ -35,6 +35,17 @@ Install, configure, and operate CI runners and agents on self-hosted infrastruct
 | **github-runner** | ✅ Implemented | Install and manage GitHub Actions self-hosted runners; installation, ARC, Kubernetes, operations |
 | **jenkins-agent** | ✅ Implemented | Install and manage Jenkins agents and nodes; SSH/JNLP/Docker/Kubernetes, installation, operations |
 | **travis-worker** | ✅ Implemented | Configure Travis CI SaaS environments and travis-worker daemon; installation, configuration, operations |
+
+### Cloud & General CLI Tools
+
+Essential command-line tools for CI/CD infrastructure and cloud deployments.
+
+| Skill | Status | Description |
+|---|---|---|
+| **docker** | ✅ Implemented | Build, run, and manage Docker containers; Dockerfile, images, registries, networking |
+| **aws** | ✅ Implemented | AWS CLI for EC2, S3, CloudFormation, IAM, ECS, and other AWS service operations |
+| **az** | ✅ Implemented | Azure CLI for resource groups, VMs, container registries, AKS, and Azure deployments |
+| **glab** | ✅ Implemented | GitLab CLI for issues, merge requests, pipelines, and repository operations |
 
 ### Documentation Lookup Skills
 

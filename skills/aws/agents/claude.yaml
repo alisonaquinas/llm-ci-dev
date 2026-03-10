@@ -1,0 +1,4 @@
+interface:
+  display_name: "AWS CLI"
+  short_description: "Operate AWS CLI workflows with safe diagnostics"
+  default_prompt: "Use $aws to inspect AWS CLI auth, profile context, and safe command paths."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab CLI"
+  short_description: "Operate GitLab CLI workflows with safe diagnostics"
+  default_prompt: "Use $glab to inspect GitLab CLI auth, host context, and safe command paths."
