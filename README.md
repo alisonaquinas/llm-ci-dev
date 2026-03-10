@@ -3,8 +3,9 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Twenty-seven skills implemented: eight platform CI/CD workflow skills
+> **Status:** Active CI/CD skills collection. Thirty-one skills implemented: eight platform CI/CD workflow skills
 > (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
+> four Infrastructure-as-Code skills (Terraform, OpenTofu, Pulumi, Ansible),
 > eight documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
 > All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
@@ -68,6 +69,17 @@ Navigate Atlassian cloud product documentation for issue tracking, command-line 
 | **jsm-docs** | ✅ Implemented | Navigate Jira Service Management Cloud documentation; queues, SLAs, portals, ITSM, Assets, REST API |
 | **atlassian-cli-docs** | ✅ Implemented | Navigate Atlassian CLI (ACLI) documentation; installation, commands, CI integration |
 | **rovo-docs** | ✅ Implemented | Navigate Atlassian Rovo documentation; Search, Chat, Agents, Rovo Dev CLI, administration |
+
+### Infrastructure as Code (IaC) Skills
+
+Provision and configure infrastructure declaratively.
+
+| Skill | Status | Description |
+|---|---|---|
+| **terraform** | ✅ Implemented | Plan and apply HashiCorp Terraform infrastructure; HCL, providers, state, workspaces |
+| **open-tofu** | ✅ Implemented | Plan and apply OpenTofu (open-source Terraform fork); `tofu` CLI, native testing, state encryption, migration guide |
+| **pulumi** | ✅ Implemented | Deploy cloud infrastructure with Pulumi using TypeScript, Python, Go, C#, or YAML; stacks, config, secrets |
+| **ansible** | ✅ Implemented | Automate configuration management with Ansible; inventory, playbooks, roles, vault, galaxy |
 
 ### Architecture & Best Practices
 

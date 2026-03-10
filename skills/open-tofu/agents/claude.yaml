@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenTofu"
+  short_description: "Plan and apply OpenTofu infrastructure with safe workflows"
+  default_prompt: "Use $open-tofu to preview infrastructure changes with tofu plan before any apply or destroy operations."

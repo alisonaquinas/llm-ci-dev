@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ansible"
+  short_description: "Automate configuration management with Ansible playbooks"
+  default_prompt: "Use $ansible to run playbooks with --check --diff before applying changes, and --limit to target subsets of inventory."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Terraform"
+  short_description: "Plan and apply Terraform infrastructure with safe workflows"
+  default_prompt: "Use $terraform to preview infrastructure changes with plan before any apply or destroy operations."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pulumi"
+  short_description: "Deploy cloud infrastructure with Pulumi using code"
+  default_prompt: "Use $pulumi to preview infrastructure changes with pulumi preview before any pulumi up or destroy operations."

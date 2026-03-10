@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Infrastructure as Code Skills (4 new skills)
+
+- **terraform** skill: Plan and apply HashiCorp Terraform infrastructure
+  - 4 reference docs: install-and-setup.md, configuration.md, command-cookbook.md, state-and-backends.md
+  - Content: macOS/Linux/Windows install, tfenv, provider blocks, variables, outputs, backends (S3/GCS/HCP), init/validate/fmt/plan/apply/destroy, state commands (list/show/mv/rm), import, workspaces, state locking, sensitive values
+
+- **open-tofu** skill: Plan and apply OpenTofu (open-source Terraform fork) infrastructure
+  - 4 reference docs: install-and-setup.md, configuration.md, command-cookbook.md, migrating-from-terraform.md
+  - Content: installer script/apt/rpm/brew/winget install, tofuenv, HCL configuration (identical to Terraform), state encryption (OpenTofu-specific), `tofu test` native testing, provider lock, migration guide from Terraform (state compatibility, license comparison, CI/CD updates, rollback)
+
+- **pulumi** skill: Deploy cloud infrastructure using TypeScript, Python, Go, C#, or YAML
+  - 4 reference docs: install-and-setup.md, language-and-project.md, stacks-and-config.md, command-cookbook.md
+  - Content: curl/brew/winget install, Pulumi Cloud and self-managed backends, language-specific code examples (TS/Python/Go/C#/YAML), Pulumi.yaml project file, stack operations, config/secrets management, cross-stack references, `pulumi new/preview/up/destroy/refresh/import/convert`
+
+- **ansible** skill: Automate configuration management with agentless SSH automation
+  - 4 reference docs: install-and-setup.md, inventory-and-variables.md, playbook-patterns.md, command-cookbook.md
+  - Content: pip/apt/dnf/brew install, SSH key setup, ansible.cfg, INI/YAML inventory, group_vars/host_vars, dynamic inventory (AWS EC2/GCP), variable precedence, play structure, common modules table, conditionals/loops/register/tags/roles, ad-hoc commands, `ansible-playbook --check --diff`, ansible-galaxy, ansible-vault, ansible-inventory
+
 #### Atlassian Documentation Lookup Skills (1 new skill)
 
 - **jsm-docs** skill: Navigate Jira Service Management Cloud documentation at support.atlassian.com/jira-service-management and REST API
@@ -134,7 +152,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Docker / Container Registry skills
 - Kubernetes / Helm deployment skills
-- Terraform / Infrastructure-as-Code skills
 - Monitoring and alerting skills (Prometheus, Grafana, etc.)
 - Custom CI/CD patterns and anti-patterns
 
