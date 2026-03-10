@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Actions Runner"
+  short_description: "Install and manage GitHub Actions self-hosted runners"
+  default_prompt: "Use $github-runner to install and manage GitHub Actions self-hosted runners."

@@ -3,9 +3,9 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Fifteen skills implemented: eight platform CI/CD workflow skills
-> (GitLab, GitHub, Jenkins, Travis CI), four documentation lookup skills, one architecture knowledge skill,
-> and two Docker-based utilities (YAML linting & LSP). All skills use the shared `SKILL.md` format,
+> **Status:** Active CI/CD skills collection. Nineteen skills implemented: eight platform CI/CD workflow skills
+> (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four documentation lookup skills,
+> one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP). All skills use the shared `SKILL.md` format,
 > making them loadable by either agent without modification.
 
 ## Skills
@@ -24,6 +24,17 @@ Write, maintain, and deploy CI/CD pipelines on major platforms.
 | **jenkins-cd** | ✅ Implemented | Deploy applications with Jenkins Pipeline stages; deployments, credentials, strategies, rollback |
 | **travis-ci** | ✅ Implemented | Write and maintain Travis CI build configuration; `.travis.yml`, phases, matrix, caching, environment |
 | **travis-cd** | ✅ Implemented | Deploy from Travis CI to cloud and registries; providers, conditions, credentials, release automation |
+
+### Platform Runner/Agent Management Skills
+
+Install, configure, and operate CI runners and agents on self-hosted infrastructure.
+
+| Skill | Status | Description |
+|---|---|---|
+| **gitlab-runner** | ✅ Implemented | Install and manage GitLab Runner daemons; installation, registration, executors, operations |
+| **github-runner** | ✅ Implemented | Install and manage GitHub Actions self-hosted runners; installation, ARC, Kubernetes, operations |
+| **jenkins-agent** | ✅ Implemented | Install and manage Jenkins agents and nodes; SSH/JNLP/Docker/Kubernetes, installation, operations |
+| **travis-worker** | ✅ Implemented | Configure Travis CI SaaS environments and travis-worker daemon; installation, configuration, operations |
 
 ### Documentation Lookup Skills
 

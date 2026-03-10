@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jenkins Agent"
+  short_description: "Install and manage Jenkins agents and nodes"
+  default_prompt: "Use $jenkins-agent to install and manage Jenkins agents and nodes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travis Worker"
+  short_description: "Configure and manage Travis CI build workers"
+  default_prompt: "Use $travis-worker to configure and manage Travis CI build workers."

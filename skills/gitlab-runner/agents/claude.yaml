@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab Runner"
+  short_description: "Install and manage GitLab Runner daemons"
+  default_prompt: "Use $gitlab-runner to install and manage GitLab Runner."

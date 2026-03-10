@@ -43,6 +43,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 4 reference docs: deployment-providers.md, deployment-conditions.md, credential-management.md, release-automation.md
   - Content: Deployment providers (Heroku, AWS S3, npm, PyPI, Docker, GitHub), conditional deployment, encrypted credentials, semantic versioning, releases
 
+#### Platform Runner/Agent Management Skills (4 new skills)
+
+- **gitlab-runner** skill: Install and manage GitLab Runner daemons
+  - 4 reference docs: installation.md, registration-and-config.md, executors.md, operations.md
+  - Content: Installation on Linux/Docker/Kubernetes/macOS/Windows, runner registration, auth tokens, config.toml anatomy, executor types (Shell, Docker, Kubernetes, SSH), health monitoring, log management, troubleshooting
+
+- **github-runner** skill: Install and manage GitHub Actions self-hosted runners
+  - 4 reference docs: installation.md, registration-and-config.md, arc-and-scaling.md, operations.md
+  - Content: Runner installation on Linux/macOS/Windows/Docker, JNLP launch, registration tokens, runner labels/groups, Actions Runner Controller (ARC) on Kubernetes, ephemeral runners, auto-scaling, operations
+
+- **jenkins-agent** skill: Install and manage Jenkins agents and nodes
+  - 4 reference docs: agent-types.md, installation-and-connection.md, cloud-and-dynamic-agents.md, operations.md
+  - Content: Agent types (SSH, JNLP, WebSocket JNLP, Docker Cloud, Kubernetes, built-in), agent.jar installation, SSH key setup, JNLP launch, Docker Cloud plugin, Kubernetes plugin with pod templates, CASC, operations
+
+- **travis-worker** skill: Configure Travis CI SaaS environments and manage travis-worker daemon
+  - 4 reference docs: saas-build-environments.md, enterprise-installation.md, enterprise-configuration.md, operations.md
+  - Content: SaaS environment selection (OS, dist, arch), package/container installation, custom build images, RabbitMQ connection, pool sizing, resource limits, worker groups, enterprise configuration, monitoring
+
 #### Documentation & Architecture Skills
 
 - **gitlab-docs** skill: Navigate docs.gitlab.com for CI/CD, runners, API, administration docs via WebFetch
