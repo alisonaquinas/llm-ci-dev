@@ -3,9 +3,9 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Twenty-six skills implemented: eight platform CI/CD workflow skills
+> **Status:** Active CI/CD skills collection. Twenty-seven skills implemented: eight platform CI/CD workflow skills
 > (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
-> seven documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
+> eight documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
 > All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
 ## Skills
@@ -65,6 +65,7 @@ Navigate Atlassian cloud product documentation for issue tracking, command-line 
 | Skill | Status | Description |
 |---|---|---|
 | **jira-docs** | ✅ Implemented | Navigate Jira Cloud documentation and REST API v3; boards, workflows, JQL, automation |
+| **jsm-docs** | ✅ Implemented | Navigate Jira Service Management Cloud documentation; queues, SLAs, portals, ITSM, Assets, REST API |
 | **atlassian-cli-docs** | ✅ Implemented | Navigate Atlassian CLI (ACLI) documentation; installation, commands, CI integration |
 | **rovo-docs** | ✅ Implemented | Navigate Atlassian Rovo documentation; Search, Chat, Agents, Rovo Dev CLI, administration |
 

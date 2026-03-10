@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Atlassian Documentation Lookup Skills (1 new skill)
+
+- **jsm-docs** skill: Navigate Jira Service Management Cloud documentation at support.atlassian.com/jira-service-management and REST API
+  - 4 reference docs: navigation.md, quick-reference.md, jsm-cloud-reference.md, api-reference.md
+  - Content: JSM Cloud product overview, doc site structure, queue/SLA/portal/request type configuration, ITSM processes (incident/change/problem management), Assets (IT asset management), Knowledge Base integration, JSM REST API endpoints, authentication, pagination, asset management operations
+
 ## [0.0.1] - 2026-03-10
 
 ### Added

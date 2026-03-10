@@ -65,8 +65,13 @@ $skills = @(
     "github-ci", "github-cd",
     "jenkins-ci", "jenkins-cd",
     "travis-ci", "travis-cd",
+    # Platform Runner/Agent Management Skills
+    "gitlab-runner", "github-runner", "jenkins-agent", "travis-worker",
+    # Cloud & General CLI Tools
+    "docker", "aws", "az", "glab",
     # Documentation Lookup Skills
     "gitlab-docs", "github-docs", "jenkins-docs", "travis-ci-docs",
+    "jira-docs", "jsm-docs", "atlassian-cli-docs", "rovo-docs",
     # Architecture & Utilities
     "ci-architecture", "yaml-linting", "yaml-lsp"
 )
@@ -107,7 +112,9 @@ See [README.md](README.md) for the complete skill list and descriptions.
 ### Recommended Usage
 
 - **Start with platform workflow skills** — Use `$gitlab-ci`, `$github-ci`, `$jenkins-ci`, or `$travis-ci` to learn how to write CI/CD pipelines
-- **Reference documentation skills** — Load `$gitlab-docs`, `$github-docs`, etc. for syntax details and version-specific information
+- **Runner/agent management** — Use `$gitlab-runner`, `$github-runner`, `$jenkins-agent`, or `$travis-worker` to configure self-hosted infrastructure
+- **Cloud CLI tools** — Use `$docker`, `$aws`, `$az`, or `$glab` for infrastructure and deployment operations
+- **Reference documentation skills** — Load `$gitlab-docs`, `$github-docs`, `$jira-docs`, `$jsm-docs`, etc. for syntax details and version-specific information
 - **Design patterns** — Consult `$ci-architecture` for pipeline design principles, security, and deployment strategies
 - **Utility skills** — Use `$yaml-linting` and `$yaml-lsp` for validating and editing YAML files
 

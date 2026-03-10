@@ -1,0 +1,4 @@
+interface:
+  display_name: "JSM Docs Lookup"
+  short_description: "Look up Jira Service Management documentation"
+  default_prompt: "Use $jsm-docs to find Jira Service Management docs and fetch documentation."
