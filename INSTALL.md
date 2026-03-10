@@ -59,7 +59,19 @@ $skillsRepo = "C:\path\to\llm-ci-cd-skills\skills"
 $codexSkillsDir = "$env:USERPROFILE\.codex\skills"
 
 # For each skill, create a directory junction
-foreach ($skill in @("gitlab-docs", "github-docs", "jenkins-docs", "travis-ci-docs", "ci-architecture", "yaml-linting", "yaml-lsp")) {
+$skills = @(
+    # Platform CI/CD Workflow Skills
+    "gitlab-ci", "gitlab-cd",
+    "github-ci", "github-cd",
+    "jenkins-ci", "jenkins-cd",
+    "travis-ci", "travis-cd",
+    # Documentation Lookup Skills
+    "gitlab-docs", "github-docs", "jenkins-docs", "travis-ci-docs",
+    # Architecture & Utilities
+    "ci-architecture", "yaml-linting", "yaml-lsp"
+)
+
+foreach ($skill in $skills) {
     New-Item -ItemType Junction -Path "$codexSkillsDir\$skill" -Target "$skillsRepo\$skill" -Force
 }
 ```
@@ -91,3 +103,12 @@ You should now be able to trigger skills by name (e.g., `$gitlab-docs`, `$github
 
 Once installed, refer to individual skill documentation for usage examples.
 See [README.md](README.md) for the complete skill list and descriptions.
+
+### Recommended Usage
+
+- **Start with platform workflow skills** — Use `$gitlab-ci`, `$github-ci`, `$jenkins-ci`, or `$travis-ci` to learn how to write CI/CD pipelines
+- **Reference documentation skills** — Load `$gitlab-docs`, `$github-docs`, etc. for syntax details and version-specific information
+- **Design patterns** — Consult `$ci-architecture` for pipeline design principles, security, and deployment strategies
+- **Utility skills** — Use `$yaml-linting` and `$yaml-lsp` for validating and editing YAML files
+
+Each platform skill contains 4 reference documents accessible via the Intent Router. Load them on demand for specific topics.

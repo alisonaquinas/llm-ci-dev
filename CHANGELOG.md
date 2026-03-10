@@ -9,6 +9,42 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Platform CI/CD Workflow Skills (8 new skills)
+
+- **gitlab-ci** skill: Write and maintain GitLab CI pipelines
+  - 4 reference docs: pipeline-basics.md, runners-and-caching.md, testing-and-quality.md, variables-and-secrets.md
+  - Content: `.gitlab-ci.yml` structure, job anatomy, stages, runners, caching, artifacts, testing, quality gates, variables, secrets, CI variables, OIDC tokens
+
+- **gitlab-cd** skill: Deploy with GitLab CD environments and pipelines
+  - 4 reference docs: environments-and-deployments.md, deployment-targets.md, review-apps.md, release-and-versioning.md
+  - Content: Environment keyword, deployment tiers, protection rules, Kubernetes/AWS/GCP/Heroku deployments, review apps, releases, package registries
+
+- **github-ci** skill: Write and maintain GitHub Actions CI workflows
+  - 4 reference docs: workflow-basics.md, runners-and-caching.md, testing-patterns.md, security-and-secrets.md
+  - Content: Workflow YAML, event triggers, job anatomy, GitHub-hosted/self-hosted runners, matrix testing, caching, testing, code coverage, secrets, permissions
+
+- **github-cd** skill: Deploy with GitHub Actions CD workflows and OIDC
+  - 4 reference docs: environments-and-protection.md, cloud-deployments.md, oidc-and-auth.md, releases-and-packages.md
+  - Content: Environment protection, deployment approval, OIDC authentication, AWS/GCP/Azure/Kubernetes deployments, releases, container registries, artifact signing
+
+- **jenkins-ci** skill: Write Jenkins Declarative Pipeline CI stages
+  - 4 reference docs: declarative-pipeline.md, agents-and-workspaces.md, testing-and-reporting.md, shared-libraries.md
+  - Content: Declarative Pipeline structure, agent types, stages, steps, post conditions, parameters, tools, when conditions, testing, reporting, shared libraries
+
+- **jenkins-cd** skill: Deploy applications with Jenkins Pipeline stages
+  - 4 reference docs: deployment-stages.md, credentials-and-secrets.md, deployment-targets.md, strategies-and-rollback.md
+  - Content: Deployment stages, input approval, locking, credentials management, Kubernetes/AWS/Docker deployments, blue-green/canary strategies, rollback patterns
+
+- **travis-ci** skill: Write and maintain Travis CI build configuration
+  - 4 reference docs: build-lifecycle.md, matrix-and-environments.md, testing-patterns.md, caching-strategies.md
+  - Content: Build phases, language matrix, OS variants, environment variables, conditional builds, testing, caching, Docker layer caching
+
+- **travis-cd** skill: Deploy from Travis CI to cloud and registries
+  - 4 reference docs: deployment-providers.md, deployment-conditions.md, credential-management.md, release-automation.md
+  - Content: Deployment providers (Heroku, AWS S3, npm, PyPI, Docker, GitHub), conditional deployment, encrypted credentials, semantic versioning, releases
+
+#### Documentation & Architecture Skills
+
 - **gitlab-docs** skill: Navigate docs.gitlab.com for CI/CD, runners, API, administration docs via WebFetch
 - **github-docs** skill: Navigate docs.github.com/en for Actions, REST API, Packages, Security docs via WebFetch
 - **jenkins-docs** skill: Navigate jenkins.io/doc for Declarative Pipeline, Shared Libraries, plugins, steps via WebFetch
