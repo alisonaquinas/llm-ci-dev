@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pipenv"
+  short_description: "Manage Python virtual environments with Pipenv"
+  default_prompt: "Use $pipenv to manage Python virtual environments and dependencies with Pipfile."

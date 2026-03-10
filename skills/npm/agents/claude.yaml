@@ -1,0 +1,4 @@
+interface:
+  display_name: "npm"
+  short_description: "Manage Node.js packages and run scripts with npm"
+  default_prompt: "Use $npm to manage Node.js packages, run scripts, and audit dependencies."

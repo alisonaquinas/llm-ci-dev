@@ -1,0 +1,4 @@
+interface:
+  display_name: "pip"
+  short_description: "Install and manage Python packages with pip"
+  default_prompt: "Use $pip to install and manage Python packages, always within a virtual environment."

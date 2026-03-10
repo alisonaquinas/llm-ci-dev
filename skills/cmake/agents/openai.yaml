@@ -1,0 +1,4 @@
+interface:
+  display_name: "CMake"
+  short_description: "Configure and build C/C++ projects with CMake"
+  default_prompt: "Use $cmake to configure and build C/C++ projects with CMake, always building out-of-source with -B build."

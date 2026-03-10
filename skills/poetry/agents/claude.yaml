@@ -1,0 +1,4 @@
+interface:
+  display_name: "Poetry"
+  short_description: "Manage Python dependencies and builds with Poetry"
+  default_prompt: "Use $poetry to manage Python project dependencies, virtual environments, and package builds."

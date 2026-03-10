@@ -1,0 +1,4 @@
+interface:
+  display_name: "Yarn"
+  short_description: "Manage JavaScript packages with Yarn"
+  default_prompt: "Use $yarn to manage JavaScript packages with Yarn Berry or Classic."

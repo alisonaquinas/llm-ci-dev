@@ -1,0 +1,4 @@
+interface:
+  display_name: "Make"
+  short_description: "Automate builds and tasks with GNU Make"
+  default_prompt: "Use $make to automate build tasks with GNU Make, using make -n to preview before running."

@@ -9,6 +9,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Package & Build Manager Skills (10 new skills)
+
+##### Node.js
+
+- **npm** skill: Manage Node.js packages and run scripts with npm
+  - 4 reference docs: install-and-setup.md, package-json.md, command-cookbook.md, workspaces.md
+  - Content: nvm/fnm/corepack install, .npmrc config, package.json fields (dependencies/devDependencies/peerDependencies/exports/engines/scripts), init/install/ci/run/publish/update/outdated/audit/exec/link/pack commands, --dry-run for publish, workspaces field, --workspace flag, hoisting
+
+- **yarn** skill: Manage JavaScript packages with Yarn Berry (v3/v4) and Classic (v1)
+  - 4 reference docs: install-and-setup.md, configuration.md, command-cookbook.md, workspaces.md
+  - Content: corepack enable, Classic vs Berry comparison, .yarnrc.yml (Berry) and .yarnrc (Classic), nodeLinker/PnP/node-modules, add/remove/install(--immutable)/run/dlx/up/audit/pack/publish/why/dedupe, workspaces foreach, workspace: protocol, constraints
+
+- **pnpm** skill: Manage Node.js packages efficiently with pnpm's content-addressable store
+  - 4 reference docs: install-and-setup.md, configuration.md, command-cookbook.md, workspaces.md
+  - Content: corepack/standalone install, pnpm env for Node.js versions, .npmrc (shamefully-hoist/store-dir), pnpm-workspace.yaml, add/remove/install(--frozen-lockfile)/run/dlx/update/outdated/audit/publish/store prune, recursive (-r), --filter, workspace:/catalog: protocols
+
+##### Python
+
+- **pip** skill: Install and manage Python packages with pip inside virtual environments
+  - 4 reference docs: install-and-setup.md, requirements-and-indexes.md, command-cookbook.md, virtual-environments.md
+  - Content: ensurepip, pip upgrade, pip.conf/pip.ini, requirements.txt format, version specifiers, constraints files, --index-url/--extra-index-url, private PyPI, --require-hashes, install/download/uninstall/freeze/list/show/check/wheel/hash/cache purge, venv creation/activation (bash/fish/PowerShell), pipx for tools
+
+- **poetry** skill: Manage Python dependencies, virtual environments, and package builds with Poetry
+  - 4 reference docs: install-and-setup.md, pyproject-toml.md, command-cookbook.md, dependency-groups.md
+  - Content: pipx install, POETRY_HOME, [tool.poetry] metadata, version constraints (^/~/*/>=), new/init/add/remove/install/update/show/build/publish/run/shell/env use/export/version commands, dependency groups (--with/--without/--only), group export to requirements.txt
+
+- **pipenv** skill: Manage Python virtual environments and dependencies with Pipenv and Pipfile
+  - 4 reference docs: install-and-setup.md, pipfile-and-lockfile.md, command-cookbook.md, environment-management.md
+  - Content: pip user/brew install, PIPENV_VENV_IN_PROJECT, Pipfile [[source]]/[packages]/[dev-packages]/[requires], Pipfile.lock, install/uninstall/sync/lock/run/shell/graph/check/clean/update commands, .env auto-loading, PIPENV_PYTHON
+
+##### Java/JVM
+
+- **maven** skill: Build and manage Java projects with Apache Maven lifecycle phases
+  - 4 reference docs: install-and-setup.md, pom-xml.md, command-cookbook.md, lifecycle-and-plugins.md
+  - Content: brew/apt/sdkman install, Maven wrapper (mvnw), JAVA_HOME, settings.xml, GAV coordinates, dependency scopes, dependencyManagement, profiles, validate/compile/test/package/verify/install/deploy/clean/site phases, dependency:tree, versions plugin, -DskipTests/-B/-T/-pl/-am flags, surefire/failsafe/shade/compiler/resources plugins
+
+- **gradle** skill: Build Java and Android projects with Gradle using the Gradle wrapper
+  - 4 reference docs: install-and-setup.md, build-scripts.md, command-cookbook.md, tasks-and-plugins.md
+  - Content: sdkman/brew install, Gradle wrapper (./gradlew), gradle init, Groovy vs Kotlin DSL, repositories/dependencies/configurations, settings.gradle, build/test/clean/assemble/check/run/dependencies/tasks commands, -m/--dry-run/--no-daemon/--parallel/--configuration-cache, java/application/spring-boot/maven-publish plugins
+
+##### C/C++
+
+- **make** skill: Automate builds and tasks with GNU Make and Makefiles
+  - 4 reference docs: install-and-setup.md, makefile-syntax.md, command-cookbook.md, patterns-and-functions.md
+  - Content: brew/apt/xcode-tools install, target/prerequisite/recipe structure (tab indentation), variable flavors (=/:=/?=/+=), automatic variables ($@/$</$^/$*), .PHONY/.DEFAULT_GOAL, make/-n/-j/-f/-C/-B/-k/V=1 flags, static pattern rules, wildcard/patsubst/shell/filter/foreach functions, ifeq/ifdef conditionals
+
+- **cmake** skill: Configure and build C/C++ projects with CMake using out-of-source builds
+  - 4 reference docs: install-and-setup.md, cmakelists.md, command-cookbook.md, build-types-and-generators.md
+  - Content: brew/apt/pip/winget install, cmake_minimum_required/project()/add_executable/add_library/target_link_libraries/find_package/install(), cmake -S . -B build/-DCMAKE_BUILD_TYPE/--build/--install/ctest/--preset/-G flags, Debug/Release/RelWithDebInfo/MinSizeRel build types, single-config vs multi-config generators, toolchain files, CMakePresets.json
+
 #### Infrastructure as Code Skills (4 new skills)
 
 - **terraform** skill: Plan and apply HashiCorp Terraform infrastructure

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gradle"
+  short_description: "Build Java and Android projects with Gradle"
+  default_prompt: "Use $gradle to build Java and Android projects with Gradle, preferring the ./gradlew wrapper."

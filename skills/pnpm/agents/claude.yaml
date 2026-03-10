@@ -1,0 +1,4 @@
+interface:
+  display_name: "pnpm"
+  short_description: "Manage Node.js packages efficiently with pnpm"
+  default_prompt: "Use $pnpm to manage Node.js packages with a content-addressable store and strict dependency isolation."

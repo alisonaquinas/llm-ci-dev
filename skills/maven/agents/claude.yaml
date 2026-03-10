@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maven"
+  short_description: "Build and manage Java projects with Apache Maven"
+  default_prompt: "Use $maven to build Java projects with Maven, following lifecycle phases: validate, compile, test, package, install, deploy."

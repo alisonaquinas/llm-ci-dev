@@ -3,9 +3,10 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Thirty-one skills implemented: eight platform CI/CD workflow skills
+> **Status:** Active CI/CD skills collection. Forty-one skills implemented: eight platform CI/CD workflow skills
 > (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
 > four Infrastructure-as-Code skills (Terraform, OpenTofu, Pulumi, Ansible),
+> ten package & build manager skills (npm, yarn, pnpm, pip, poetry, pipenv, maven, gradle, make, cmake),
 > eight documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
 > All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
@@ -69,6 +70,40 @@ Navigate Atlassian cloud product documentation for issue tracking, command-line 
 | **jsm-docs** | ✅ Implemented | Navigate Jira Service Management Cloud documentation; queues, SLAs, portals, ITSM, Assets, REST API |
 | **atlassian-cli-docs** | ✅ Implemented | Navigate Atlassian CLI (ACLI) documentation; installation, commands, CI integration |
 | **rovo-docs** | ✅ Implemented | Navigate Atlassian Rovo documentation; Search, Chat, Agents, Rovo Dev CLI, administration |
+
+### Package & Build Manager Skills
+
+Install dependencies, manage package versions, and run builds across Node.js, Python, Java/JVM, and C/C++ ecosystems.
+
+#### Node.js
+
+| Skill | Status | Description |
+|---|---|---|
+| **npm** | ✅ Implemented | Manage Node.js packages, run scripts, and audit dependencies with npm |
+| **yarn** | ✅ Implemented | Manage JavaScript packages with Yarn Berry (v3/v4) or Classic (v1) |
+| **pnpm** | ✅ Implemented | Manage Node.js packages efficiently with pnpm's content-addressable store |
+
+#### Python
+
+| Skill | Status | Description |
+|---|---|---|
+| **pip** | ✅ Implemented | Install and manage Python packages with pip inside virtual environments |
+| **poetry** | ✅ Implemented | Manage Python dependencies, virtual environments, and package builds with Poetry |
+| **pipenv** | ✅ Implemented | Manage Python virtual environments and dependencies with Pipenv and Pipfile |
+
+#### Java/JVM
+
+| Skill | Status | Description |
+|---|---|---|
+| **maven** | ✅ Implemented | Build and manage Java projects with Apache Maven lifecycle phases |
+| **gradle** | ✅ Implemented | Build Java and Android projects with Gradle using the Gradle wrapper |
+
+#### C/C++
+
+| Skill | Status | Description |
+|---|---|---|
+| **make** | ✅ Implemented | Automate builds and tasks with GNU Make and Makefiles |
+| **cmake** | ✅ Implemented | Configure and build C/C++ projects with CMake using out-of-source builds |
 
 ### Infrastructure as Code (IaC) Skills
 
