@@ -1,18 +1,25 @@
-// Markdown linting configuration
 {
-  "extends": "markdownlint/style",
-  "markdown-lint-disable": [],
-  "rules": {
-    "line-length": {
-      "line_length": 120,
-      "heading_line_length": 120,
-      "headers": false,
-      "code_block_line_length": null,
-      "code_blocks": false
+    "ignores": [
+        ".venv",
+        ".pytest_cache",
+        "node_modules",
+        ".next",
+        ".git"
+    ],
+    "config": {
+        "default": true,
+        "line-length": false,
+        "no-trailing-punctuation": false,
+        "no-inline-html": false,
+        "table-column-style": false,
+        "no-duplicate-heading": false
     },
-    "no-inline-html": false,
-    "whitespace": {
-      "br_spaces": 2
-    }
-  }
+    "overrides": [
+        {
+            "files": ["CHANGELOG.md"],
+            "config": {
+                "MD024": false
+            }
+        }
+    ]
 }

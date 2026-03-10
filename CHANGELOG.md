@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Repository structure and documentation templates
 - Installation guides for Claude Code and Codex
 - AGENTS.md guidance for skill development
+- Linting system imported from llm-shared-skills with 12 validation rules (L01-L12)
+- Markdownlint configuration aligned with skill standards
 
 ### Planned
 
