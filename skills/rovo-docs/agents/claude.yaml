@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rovo Docs Lookup"
+  short_description: "Look up Atlassian Rovo documentation"
+  default_prompt: "Use $rovo-docs to find Rovo docs pages and fetch documentation."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Atlassian CLI Docs"
+  short_description: "Look up Atlassian CLI (ACLI) documentation"
+  default_prompt: "Use $atlassian-cli-docs to find Atlassian CLI docs and fetch documentation."

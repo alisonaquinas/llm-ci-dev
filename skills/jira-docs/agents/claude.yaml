@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jira Docs Lookup"
+  short_description: "Look up Jira documentation and REST API"
+  default_prompt: "Use $jira-docs to find Jira docs pages and fetch documentation."
