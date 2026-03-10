@@ -1,0 +1,18 @@
+// Markdown linting configuration
+{
+  "extends": "markdownlint/style",
+  "markdown-lint-disable": [],
+  "rules": {
+    "line-length": {
+      "line_length": 120,
+      "heading_line_length": 120,
+      "headers": false,
+      "code_block_line_length": null,
+      "code_blocks": false
+    },
+    "no-inline-html": false,
+    "whitespace": {
+      "br_spaces": 2
+    }
+  }
+}
