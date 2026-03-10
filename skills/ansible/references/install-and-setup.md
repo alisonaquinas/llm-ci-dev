@@ -87,7 +87,8 @@ ansible all -i inventory.ini -m ping
 ```
 
 Expected ping output:
-```
+
+```json
 web1.example.com | SUCCESS => {
     "ping": "pong"
 }

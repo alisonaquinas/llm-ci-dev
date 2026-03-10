@@ -67,11 +67,11 @@ pulumi login --local
 
 | Language | Install |
 | --- | --- |
-| TypeScript/JS | `brew install node` or https://nodejs.org |
-| Python | `brew install python` or https://python.org |
-| Go | `brew install go` or https://go.dev |
-| C# / .NET | https://dotnet.microsoft.com/download |
-| Java | `brew install openjdk` or https://adoptium.net |
+| TypeScript/JS | `brew install node` or <https://nodejs.org> |
+| Python | `brew install python` or <https://python.org> |
+| Go | `brew install go` or <https://go.dev> |
+| C# / .NET | <https://dotnet.microsoft.com/download> |
+| Java | `brew install openjdk` or <https://adoptium.net> |
 
 ## Post-Install Verification
 

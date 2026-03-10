@@ -18,7 +18,7 @@ Add `.venv/` to `.gitignore` when using this mode.
 Pipenv automatically loads a `.env` file in the project root whenever `pipenv run`
 or `pipenv shell` is invoked. No extra configuration is required.
 
-```
+```ini
 # .env
 DATABASE_URL=postgres://localhost/mydb
 SECRET_KEY=dev-secret

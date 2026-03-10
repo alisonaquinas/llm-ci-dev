@@ -19,7 +19,7 @@ Running `yarn install` at the root installs all workspace dependencies and links
 
 ## Directory Layout
 
-```
+```text
 my-monorepo/
 ├── package.json          ← root (workspaces declared here)
 ├── yarn.lock             ← single lock file for the entire repo

@@ -4,7 +4,7 @@
 
 Each line specifies a package, optionally with version constraints:
 
-```
+```text
 # Exact pin (preferred for deployments)
 requests==2.31.0
 
@@ -45,7 +45,7 @@ Constraints files (`-c`) restrict versions of already-requested packages without
 pip install -r requirements.txt -c constraints.txt
 ```
 
-```
+```text
 # constraints.txt
 certifi==2024.2.2
 urllib3==2.2.1

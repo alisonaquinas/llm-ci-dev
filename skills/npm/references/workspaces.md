@@ -19,7 +19,7 @@ Running `npm install` at the root installs all workspace dependencies and create
 
 ## Directory Layout
 
-```
+```text
 my-monorepo/
 ├── package.json          ← root (workspaces declared here)
 ├── package-lock.json     ← single lock file for the entire repo

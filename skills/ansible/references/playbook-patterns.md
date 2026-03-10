@@ -140,7 +140,7 @@ ansible-playbook site.yml --skip-tags "packages"
 
 ## Roles
 
-```
+```text
 roles/
 └── nginx/
     ├── defaults/

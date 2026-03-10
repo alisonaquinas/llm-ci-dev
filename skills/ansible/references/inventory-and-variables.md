@@ -59,7 +59,7 @@ all:
 
 Organize variables in directory trees:
 
-```
+```text
 inventory/
 ├── hosts.yaml
 ├── group_vars/

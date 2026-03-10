@@ -15,9 +15,6 @@ rules:
     allowed-values: ["true", "false"]
     check-keys: false
 
-  # Single-space comment prefix is common in shell-embedded YAML snippets
-  comments:
-    min-spaces-before-comment: 1
 
 ignore: |
   .git/

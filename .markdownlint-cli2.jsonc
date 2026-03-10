@@ -4,7 +4,8 @@
         ".pytest_cache",
         "node_modules",
         ".next",
-        ".git"
+        ".git",
+        "planning.md"
     ],
     "config": {
         "default": true,
@@ -12,7 +13,9 @@
         "no-trailing-punctuation": false,
         "no-inline-html": false,
         "table-column-style": false,
-        "no-duplicate-heading": false
+        "no-duplicate-heading": false,
+        // Makefile recipes require hard tabs; allow tabs inside code blocks
+        "no-hard-tabs": { "code_blocks": false }
     },
     "overrides": [
         {
