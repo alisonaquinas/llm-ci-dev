@@ -59,7 +59,7 @@ $skillsRepo = "C:\path\to\llm-ci-cd-skills\skills"
 $codexSkillsDir = "$env:USERPROFILE\.codex\skills"
 
 # For each skill, create a directory junction
-foreach ($skill in @("github-actions", "gitlab-ci", "jenkins")) {
+foreach ($skill in @("gitlab-docs", "github-docs", "jenkins-docs", "travis-ci-docs", "ci-architecture", "yaml-linting", "yaml-lsp")) {
     New-Item -ItemType Junction -Path "$codexSkillsDir\$skill" -Target "$skillsRepo\$skill" -Force
 }
 ```
@@ -71,7 +71,7 @@ After installation, restart your agent tool:
 - **Claude Code:** Restart the CLI or reload the IDE extension
 - **Codex:** Reload the Codex agent
 
-You should now be able to trigger skills by name (e.g., `$github-actions`).
+You should now be able to trigger skills by name (e.g., `$gitlab-docs`, `$github-docs`, `$ci-architecture`).
 
 ## Troubleshooting
 

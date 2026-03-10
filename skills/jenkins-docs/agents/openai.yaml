@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jenkins Docs Lookup"
+  short_description: "Look up Jenkins docs and Pipeline syntax"
+  default_prompt: "Use $jenkins-docs to find Jenkins docs pages and fetch documentation."

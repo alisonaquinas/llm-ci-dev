@@ -9,9 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **gitlab-docs** skill: Navigate docs.gitlab.com for CI/CD, runners, API, administration docs via WebFetch
+- **github-docs** skill: Navigate docs.github.com/en for Actions, REST API, Packages, Security docs via WebFetch
+- **jenkins-docs** skill: Navigate jenkins.io/doc for Declarative Pipeline, Shared Libraries, plugins, steps via WebFetch
+- **travis-ci-docs** skill: Navigate docs.travis-ci.com for .travis.yml reference, build stages, deployment via WebFetch
+- **ci-architecture** skill: Design CI/CD pipelines using proven best practices (DORA metrics, DevSecOps, SLSA framework, platform engineering patterns)
+  - 4 reference docs: pipeline-design.md, security-practices.md, deployment-patterns.md, measurement.md
+  - Content: Canonical pipeline stages, test pyramid, branching strategies, artifact management, deployment patterns (blue-green, canary, rolling, GitOps, IaC), security practices, DORA metrics, observability, incident recovery
+
+### Previously Added
+
 - yaml-linting skill: Docker-based YAML linting with yamllint (pipelinecomponents/yamllint)
 - yaml-lsp skill: YAML Language Server in Docker for editor integration (node:lts-alpine + npm)
-- Initial empty plugin scaffold for CI/CD skills collection
+- Initial plugin scaffold for CI/CD skills collection
 - Repository structure and documentation templates
 - Installation guides for Claude Code and Codex
 - AGENTS.md guidance for skill development
@@ -20,13 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Planned
 
-- GitHub Actions skill
-- GitLab CI skill
-- Jenkins skill
 - Docker / Container Registry skills
 - Kubernetes / Helm deployment skills
 - Terraform / Infrastructure-as-Code skills
 - Monitoring and alerting skills (Prometheus, Grafana, etc.)
+- Custom CI/CD patterns and anti-patterns
 
 ---
 

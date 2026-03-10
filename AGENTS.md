@@ -100,7 +100,7 @@ Remove the entire `skills/<name>/` directory and delete its row from the `README
 ## Commit Conventions
 
 - Use conventional commits: `feat:`, `fix:`, `docs:`, `refactor:`
-- Scope to the skill name when relevant: `feat(github-actions): add matrix strategy reference`
+- Scope to the skill name when relevant: `feat(gitlab-docs): add runner autoscaling reference` or `feat(ci-architecture): add blue-green deployment pattern`
 - Do not amend published commits — create new ones.
 
 ---

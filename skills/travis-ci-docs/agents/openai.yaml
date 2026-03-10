@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travis CI Docs Lookup"
+  short_description: "Look up Travis CI build configuration docs"
+  default_prompt: "Use $travis-ci to find Travis CI docs pages and fetch documentation."

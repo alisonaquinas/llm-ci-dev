@@ -1,0 +1,4 @@
+interface:
+  display_name: "CI/CD Architecture"
+  short_description: "Design CI/CD pipelines using proven best practices"
+  default_prompt: "Use $ci-architecture to advise on pipeline design and CI/CD best practices."

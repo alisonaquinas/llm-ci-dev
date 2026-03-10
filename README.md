@@ -3,14 +3,33 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** This is an empty plugin template ready for skill development. All skills use the shared `SKILL.md`
-> format, making them loadable by either agent without modification.
+> **Status:** Active CI/CD skills collection. Seven skills implemented: two Docker-based utilities (YAML linting & LSP),
+> four documentation lookup skills (GitLab, GitHub, Jenkins, Travis CI), and one architecture knowledge skill.
+> All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
 ## Skills
 
+### Documentation Lookup Skills
+
 | Skill | Status | Description |
 |---|---|---|
-| (None yet) | 🔄 Coming Soon | CI/CD pipeline skills under development |
+| **gitlab-docs** | ✅ Implemented | Navigate docs.gitlab.com; URL patterns, CI/CD, runners, API, administration |
+| **github-docs** | ✅ Implemented | Navigate docs.github.com/en; GitHub Actions, REST API, Packages, Security |
+| **jenkins-docs** | ✅ Implemented | Navigate jenkins.io/doc; Declarative Pipeline, Shared Libraries, plugins, steps |
+| **travis-ci-docs** | ✅ Implemented | Navigate docs.travis-ci.com; .travis.yml reference, build stages, deployment |
+
+### Architecture & Best Practices
+
+| Skill | Status | Description |
+|---|---|---|
+| **ci-architecture** | ✅ Implemented | Design CI/CD pipelines using proven best practices (DORA, DevSecOps, SLSA, platform engineering) |
+
+### Utility Skills
+
+| Skill | Status | Description |
+|---|---|---|
+| **yaml-linting** | ✅ Implemented | Docker-based YAML linting with yamllint (pipelinecomponents/yamllint) |
+| **yaml-lsp** | ✅ Implemented | YAML Language Server via Docker for editor integration (node:lts-alpine + npx) |
 
 ## Quick Start
 

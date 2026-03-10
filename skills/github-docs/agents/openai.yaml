@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Docs Lookup"
+  short_description: "Look up GitHub and GitHub Actions docs"
+  default_prompt: "Use $github-docs to find GitHub docs pages and fetch documentation."

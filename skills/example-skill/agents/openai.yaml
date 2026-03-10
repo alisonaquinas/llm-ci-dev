@@ -1,4 +1,0 @@
-interface:
-  display_name: "Example CI/CD Skill"
-  short_description: "Template skill demonstrating the SKILL.md format and structure"
-  default_prompt: "Use $example-skill to help me understand skill structure and best practices."

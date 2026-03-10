@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab Docs Lookup"
+  short_description: "Look up GitLab documentation online"
+  default_prompt: "Use $gitlab-docs to find GitLab docs pages and fetch documentation."
