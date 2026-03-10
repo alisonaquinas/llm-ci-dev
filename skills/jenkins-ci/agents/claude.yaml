@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jenkins CI"
+  short_description: "Write Jenkins Declarative Pipeline CI stages"
+  default_prompt: "Use $jenkins-ci to write Jenkins CI Declarative Pipelines."

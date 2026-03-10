@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travis CD"
+  short_description: "Deploy from Travis CI to cloud and registries"
+  default_prompt: "Use $travis-cd to configure Travis CI deployments."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Travis CI"
+  short_description: "Write and maintain Travis CI build configuration"
+  default_prompt: "Use $travis-ci to write Travis CI build configuration files."

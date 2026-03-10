@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab CI"
+  short_description: "Write and maintain GitLab CI pipelines"
+  default_prompt: "Use $gitlab-ci to write GitLab CI pipelines."

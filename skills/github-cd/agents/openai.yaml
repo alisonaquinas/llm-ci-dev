@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub CD"
+  short_description: "Deploy with GitHub Actions CD workflows and OIDC"
+  default_prompt: "Use $github-cd to configure GitHub Actions CD deployments with OIDC authentication."

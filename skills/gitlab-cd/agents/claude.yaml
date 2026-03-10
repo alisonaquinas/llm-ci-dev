@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitLab CD"
+  short_description: "Deploy with GitLab CD environments and pipelines"
+  default_prompt: "Use $gitlab-cd to manage GitLab CD deployments, environments, and releases."

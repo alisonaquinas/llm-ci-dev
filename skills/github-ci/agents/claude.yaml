@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub CI"
+  short_description: "Write and maintain GitHub Actions CI workflows"
+  default_prompt: "Use $github-ci to write GitHub Actions CI workflows."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jenkins CD"
+  short_description: "Deploy applications with Jenkins Pipeline stages"
+  default_prompt: "Use $jenkins-cd to configure Jenkins CD deployment stages."

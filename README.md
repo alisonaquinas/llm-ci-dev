@@ -3,13 +3,31 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Seven skills implemented: two Docker-based utilities (YAML linting & LSP),
-> four documentation lookup skills (GitLab, GitHub, Jenkins, Travis CI), and one architecture knowledge skill.
-> All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
+> **Status:** Active CI/CD skills collection. Fifteen skills implemented: eight platform CI/CD workflow skills
+> (GitLab, GitHub, Jenkins, Travis CI), four documentation lookup skills, one architecture knowledge skill,
+> and two Docker-based utilities (YAML linting & LSP). All skills use the shared `SKILL.md` format,
+> making them loadable by either agent without modification.
 
 ## Skills
 
+### Platform CI/CD Workflow Skills
+
+Write, maintain, and deploy CI/CD pipelines on major platforms.
+
+| Skill | Status | Description |
+|---|---|---|
+| **gitlab-ci** | ✅ Implemented | Write and maintain GitLab CI pipelines; `.gitlab-ci.yml`, jobs, stages, runners, caching, artifacts |
+| **gitlab-cd** | ✅ Implemented | Deploy with GitLab CD environments and pipelines; deployments, environments, review apps, releases |
+| **github-ci** | ✅ Implemented | Write and maintain GitHub Actions CI workflows; workflow YAML, jobs, runners, testing, caching |
+| **github-cd** | ✅ Implemented | Deploy with GitHub Actions CD workflows and OIDC; environments, OIDC authentication, cloud deployments |
+| **jenkins-ci** | ✅ Implemented | Write Jenkins Declarative Pipeline CI stages; Jenkinsfile, agents, stages, testing, shared libraries |
+| **jenkins-cd** | ✅ Implemented | Deploy applications with Jenkins Pipeline stages; deployments, credentials, strategies, rollback |
+| **travis-ci** | ✅ Implemented | Write and maintain Travis CI build configuration; `.travis.yml`, phases, matrix, caching, environment |
+| **travis-cd** | ✅ Implemented | Deploy from Travis CI to cloud and registries; providers, conditions, credentials, release automation |
+
 ### Documentation Lookup Skills
+
+Navigate platform-specific documentation online.
 
 | Skill | Status | Description |
 |---|---|---|
