@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+## [0.0.1] - 2026-03-10
+
+### Added
+
 #### Platform CI/CD Workflow Skills (8 new skills)
 
 - **gitlab-ci** skill: Write and maintain GitLab CI pipelines
