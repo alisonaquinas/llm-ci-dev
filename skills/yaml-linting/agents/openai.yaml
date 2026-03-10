@@ -1,0 +1,4 @@
+interface:
+  display_name: "YAML Linting"
+  short_description: "Lint YAML files using yamllint in Docker"
+  default_prompt: "Use $yaml-linting to validate YAML syntax and style."

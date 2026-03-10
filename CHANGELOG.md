@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- yaml-linting skill: Docker-based YAML linting with yamllint (pipelinecomponents/yamllint)
+- yaml-lsp skill: YAML Language Server in Docker for editor integration (node:lts-alpine + npm)
 - Initial empty plugin scaffold for CI/CD skills collection
 - Repository structure and documentation templates
 - Installation guides for Claude Code and Codex

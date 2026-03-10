@@ -1,0 +1,4 @@
+interface:
+  display_name: "YAML Language Server"
+  short_description: "Run YAML Language Server in Docker for editor integration"
+  default_prompt: "Use $yaml-lsp to set up the YAML Language Server for my editor."
