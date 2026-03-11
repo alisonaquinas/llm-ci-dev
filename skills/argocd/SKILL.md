@@ -14,7 +14,7 @@ Use this skill to manage GitOps deployments with Argo CD declaratively and safel
 3. Use `argocd app sync <name>` to trigger a deployment.
 4. Check `argocd app get <name>` for health and sync state after deploying.
 
-## Reference Files
+## Intent Router
 
 - `references/install-and-setup.md` — install argocd CLI, login, env vars, initial setup
 - `references/command-cookbook.md` — argocd app list/get/create/sync/diff/history/rollback commands

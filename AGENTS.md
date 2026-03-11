@@ -97,6 +97,50 @@ Remove the entire `skills/<name>/` directory and delete its row from the `README
 
 ---
 
+## Skill Validation
+
+Run the automated pre-flight before qualitative scoring:
+
+```bash
+bash validation/validate-skill.sh skills/<name>
+```
+
+Then score against the 8-criterion rubric. Each criterion is rated **PASS / WARN / FAIL**.
+
+| ID | Criterion | PASS | WARN | FAIL |
+| --- | --- | --- | --- | --- |
+| V01 | Description Effectiveness | All 4 trigger elements present and specific | Generic triggers; missing context | No triggers or extremely vague |
+| V02 | Intent Router Completeness | All reference files listed with specific load conditions | Minor gaps; some conditions unclear | No Intent Router or dangling refs |
+| V03 | Quick Reference Coverage | ~80% of realistic requests covered inline | 50–80% coverage; some gaps | <50% coverage; major workflows missing |
+| V04 | Safety Coverage | All destructive ops documented with guardrails | Some destructive ops; inconsistent guards | Dangerous ops undocumented or unguarded |
+| V05 | Example Quality | Concrete, realistic, runnable; edge cases shown | Some examples vague or missing edge cases | Few examples; mostly generic or impossible |
+| V06 | Reference File Depth | Self-contained; sufficient detail to execute without SKILL.md | Some hand-waving; minor gaps | Incomplete; refers back to SKILL.md |
+| V07 | LLM Usability | Agent following SKILL.md reliably succeeds; no ambiguity | Agent mostly succeeds; occasional confusion | Agent frequently fails or gets confused |
+| V08 | Public Docs Alignment | Reflects ≥6 of 8 prompt engineering standards | Reflects 4–5 standards | Reflects <4 standards |
+
+### Scoring Thresholds
+
+- **APPROVE:** ≥7 criteria at PASS; ≤1 at FAIL
+- **REVISE:** 3–6 criteria at PASS; 1–3 at FAIL (fixable issues)
+- **REJECT:** <3 criteria at PASS; ≥3 at FAIL (needs major rework)
+
+Full rubric with per-criterion detail and report template: `validation/rubric.md`
+
+### Prompt Engineering Standards (V08 Checklist)
+
+Skills should reflect these 8 standards (from `validation/public-references.md`):
+
+- [ ] **Specificity** — Exact command syntax; not "check what's staged" but `git diff --staged`
+- [ ] **Diverse examples** — 2–3 examples per workflow: happy path, gotcha, error recovery
+- [ ] **Numbered steps** — Multi-step workflows use ordered lists; each step is atomic
+- [ ] **Verification** — Every action has a follow-up check to confirm success
+- [ ] **Failure modes** — Common errors documented with recovery instructions
+- [ ] **Single responsibility** — Skill states explicitly what it does NOT cover
+- [ ] **Output format** — Command output format described before examples
+- [ ] **Context efficiency** — Intent Router first; Quick Reference second; details last
+
+---
+
 ## Commit Conventions
 
 - Use conventional commits: `feat:`, `fix:`, `docs:`, `refactor:`

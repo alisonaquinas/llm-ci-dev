@@ -14,7 +14,7 @@ Use this skill to build and run containers with Podman in a daemonless, rootless
 3. Use `podman` with the same flags as Docker — most commands are drop-in compatible.
 4. Use `podman system prune` carefully — it removes stopped containers and unused images.
 
-## Reference Files
+## Intent Router
 
 - `references/install-and-setup.md` — install Podman by platform, machine setup, config files
 - `references/command-cookbook.md` — podman run/build/push/pod/generate/play/compose commands

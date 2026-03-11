@@ -14,7 +14,7 @@ Use this skill to manage containers and images using containerd's CLI tools safe
 3. Use `ctr` only for low-level debugging; it bypasses higher-level abstractions.
 4. Inspect `/etc/containerd/config.toml` before modifying; back it up first.
 
-## Reference Files
+## Intent Router
 
 - `references/install-and-setup.md` — install containerd, nerdctl, CNI plugins, BuildKit
 - `references/command-cookbook.md` — nerdctl and ctr commands for containers, images, tasks

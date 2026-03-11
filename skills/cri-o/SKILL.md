@@ -14,7 +14,7 @@ Use this skill to configure and debug CRI-O as a Kubernetes container runtime us
 3. Use `crictl pods` and `crictl ps` to inspect pods and containers.
 4. Back up `/etc/crio/crio.conf` before making any configuration changes.
 
-## Reference Files
+## Intent Router
 
 - `references/install-and-setup.md` — install CRI-O, crictl, OCI runtime, CNI plugins
 - `references/command-cookbook.md` — crictl pods/ps/images/exec/logs/inspect/stats commands
