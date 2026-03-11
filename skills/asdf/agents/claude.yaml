@@ -1,0 +1,4 @@
+interface:
+  display_name: "asdf"
+  short_description: "Manage multiple runtime versions with asdf"
+  default_prompt: "Use $asdf to install and manage multiple language runtime versions with a single tool."

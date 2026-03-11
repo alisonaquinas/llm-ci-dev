@@ -1,0 +1,4 @@
+interface:
+  display_name: "nvm"
+  short_description: "Manage multiple Node.js versions with nvm"
+  default_prompt: "Use $nvm to install, switch, and manage Node.js versions per project."

@@ -59,6 +59,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 4 reference docs: install-and-setup.md, cmakelists.md, command-cookbook.md, build-types-and-generators.md
   - Content: brew/apt/pip/winget install, cmake_minimum_required/project()/add_executable/add_library/target_link_libraries/find_package/install(), cmake -S . -B build/-DCMAKE_BUILD_TYPE/--build/--install/ctest/--preset/-G flags, Debug/Release/RelWithDebInfo/MinSizeRel build types, single-config vs multi-config generators, toolchain files, CMakePresets.json
 
+#### Version Manager Skills (6 new skills)
+
+- **nvm** skill: Manage multiple Node.js versions with nvm
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, nvmrc-and-defaults.md, shell-integration.md
+  - Content: curl/wget installer, shell profile integration, install/use/alias/ls/ls-remote/uninstall/exec commands, .nvmrc project file, default alias, auto-use on cd, lazy-loading pattern, fish shell, Windows alternatives (fnm, nvm-windows)
+
+- **rvm** skill: Manage Ruby versions and gemsets with rvm
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, gemsets.md, project-files.md
+  - Content: GPG key import, curl installer, rvm requirements, install/use/list/gemset/current/uninstall/remove commands, gemset create/use/delete/@global, .ruby-version, .ruby-gemset, .rvmrc (legacy), autoswitch on cd
+
+- **rbenv** skill: Manage Ruby versions with rbenv and ruby-build
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, ruby-build.md, project-files.md
+  - Content: Homebrew/rbenv-installer install, shell integration, install/global/local/shell/versions/rehash/uninstall commands, ruby-build plugin, RUBY_CONFIGURE_OPTS, MAKE_OPTS, .ruby-version, shell > local > global precedence, RBENV_VERSION
+
+- **pyenv** skill: Manage multiple Python versions with pyenv
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, virtualenvs.md, project-files.md
+  - Content: pyenv-installer/Homebrew install, OS build dependencies, install/global/local/shell/versions/which commands, pyenv-virtualenv plugin, virtualenv create/activate/auto-activate, .python-version, PYENV_VERSION, multi-version tox support
+
+- **asdf** skill: Manage multiple language runtime versions with asdf
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, plugins-and-tools.md, tool-versions.md
+  - Content: git clone/Homebrew install, shell integration for bash/zsh/fish, plugin add/update/remove, install/global/local/shell/current/list/reshim commands, popular plugins (nodejs/python/ruby/golang/java/terraform), .tool-versions format, CI usage (GitHub Actions, generic)
+
+- **direnv** skill: Manage per-directory environment variables with direnv
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, envrc-patterns.md, integrations.md
+  - Content: apt/brew/nix/binary install, shell hook for bash/zsh/fish, .envrc security model, allow/deny/reload/edit/status/prune/exec commands, export/PATH_add/source_env/layout/use/dotenv patterns, pyenv/nvm/rbenv/asdf integrations, editor integration
+
 #### Infrastructure as Code Skills (4 new skills)
 
 - **terraform** skill: Plan and apply HashiCorp Terraform infrastructure

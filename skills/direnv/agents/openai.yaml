@@ -1,0 +1,4 @@
+interface:
+  display_name: "direnv"
+  short_description: "Manage per-directory environments with direnv"
+  default_prompt: "Use $direnv to load and unload environment variables automatically per directory."

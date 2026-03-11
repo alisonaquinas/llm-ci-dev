@@ -1,0 +1,4 @@
+interface:
+  display_name: "pyenv"
+  short_description: "Manage multiple Python versions with pyenv"
+  default_prompt: "Use $pyenv to install, switch, and manage Python versions per project."

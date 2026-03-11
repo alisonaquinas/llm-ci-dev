@@ -1,0 +1,4 @@
+interface:
+  display_name: "rvm"
+  short_description: "Manage Ruby versions and gemsets with rvm"
+  default_prompt: "Use $rvm to install Ruby versions, manage gemsets, and switch environments."

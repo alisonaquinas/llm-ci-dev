@@ -3,10 +3,11 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Forty-one skills implemented: eight platform CI/CD workflow skills
+> **Status:** Active CI/CD skills collection. Forty-seven skills implemented: eight platform CI/CD workflow skills
 > (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
 > four Infrastructure-as-Code skills (Terraform, OpenTofu, Pulumi, Ansible),
 > ten package & build manager skills (npm, yarn, pnpm, pip, poetry, pipenv, maven, gradle, make, cmake),
+> six version manager skills (nvm, rvm, rbenv, pyenv, asdf, direnv),
 > eight documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
 > All skills use the shared `SKILL.md` format, making them loadable by either agent without modification.
 
@@ -104,6 +105,19 @@ Install dependencies, manage package versions, and run builds across Node.js, Py
 |---|---|---|
 | **make** | ✅ Implemented | Automate builds and tasks with GNU Make and Makefiles |
 | **cmake** | ✅ Implemented | Configure and build C/C++ projects with CMake using out-of-source builds |
+
+### Version Manager Skills
+
+Install, switch, and pin language runtime versions across Node.js, Ruby, and Python ecosystems.
+
+| Skill | Status | Description |
+|---|---|---|
+| **nvm** | ✅ Implemented | Manage multiple Node.js versions with nvm; install, switch, .nvmrc, shell integration |
+| **rvm** | ✅ Implemented | Manage Ruby versions and gemsets with rvm; install, gemsets, .ruby-version autoswitch |
+| **rbenv** | ✅ Implemented | Manage Ruby versions with rbenv and ruby-build; install, local/global/shell, .ruby-version |
+| **pyenv** | ✅ Implemented | Manage multiple Python versions with pyenv; install, virtualenvs, .python-version |
+| **asdf** | ✅ Implemented | Manage multiple language runtime versions with asdf; plugins, .tool-versions, CI usage |
+| **direnv** | ✅ Implemented | Manage per-directory environment variables with direnv; .envrc, layouts, tool integrations |
 
 ### Infrastructure as Code (IaC) Skills
 

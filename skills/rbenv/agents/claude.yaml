@@ -1,0 +1,4 @@
+interface:
+  display_name: "rbenv"
+  short_description: "Manage Ruby versions with rbenv and ruby-build"
+  default_prompt: "Use $rbenv to install and switch Ruby versions using rbenv and ruby-build."
