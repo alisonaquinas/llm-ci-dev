@@ -1,0 +1,4 @@
+interface:
+  display_name: "HashiCorp Vault"
+  short_description: "Manage secrets and access policies with HashiCorp Vault"
+  default_prompt: "Use $vault to retrieve and manage secrets with least-privilege tokens and KV v2 paths."

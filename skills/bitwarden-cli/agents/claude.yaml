@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bitwarden CLI"
+  short_description: "Access and manage Bitwarden vault secrets via bw CLI"
+  default_prompt: "Use $bw to unlock the vault, capture BW_SESSION, and retrieve secrets with least-privilege access."

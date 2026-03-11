@@ -1,0 +1,4 @@
+interface:
+  display_name: "1Password CLI"
+  short_description: "Access 1Password secrets and run commands via op CLI"
+  default_prompt: "Use $op to read secrets via op:// references and inject them with op run rather than extracting to shell variables."

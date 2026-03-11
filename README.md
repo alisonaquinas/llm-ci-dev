@@ -3,9 +3,10 @@
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
-> **Status:** Active CI/CD skills collection. Forty-seven skills implemented: eight platform CI/CD workflow skills
+> **Status:** Active CI/CD skills collection. Fifty-one skills implemented: eight platform CI/CD workflow skills
 > (GitLab, GitHub, Jenkins, Travis CI), four platform runner/agent management skills, four cloud/general CLI tools (Docker, AWS, Azure, GitLab CLI),
 > four Infrastructure-as-Code skills (Terraform, OpenTofu, Pulumi, Ansible),
+> four secret management skills (HashiCorp Vault, Bitwarden CLI, 1Password CLI, AWS Secrets Manager),
 > ten package & build manager skills (npm, yarn, pnpm, pip, poetry, pipenv, maven, gradle, make, cmake),
 > six version manager skills (nvm, rvm, rbenv, pyenv, asdf, direnv),
 > eight documentation lookup skills (platforms + Atlassian), one architecture knowledge skill, and two Docker-based utilities (YAML linting & LSP).
@@ -105,6 +106,17 @@ Install dependencies, manage package versions, and run builds across Node.js, Py
 |---|---|---|
 | **make** | ✅ Implemented | Automate builds and tasks with GNU Make and Makefiles |
 | **cmake** | ✅ Implemented | Configure and build C/C++ projects with CMake using out-of-source builds |
+
+### Secret Management Skills
+
+Store, retrieve, and rotate secrets securely across HashiCorp Vault, Bitwarden, 1Password, and AWS.
+
+| Skill | Status | Description |
+|---|---|---|
+| **vault** | ✅ Implemented | Manage secrets, tokens, and policies with HashiCorp Vault KV engine and auth methods |
+| **bitwarden-cli** | ✅ Implemented | Access and manage Bitwarden vault items via the bw CLI with session key auth |
+| **1password-cli** | ✅ Implemented | Retrieve 1Password secrets and inject them into commands via op run and secret references |
+| **aws-secretsmanager** | ✅ Implemented | Store, retrieve, and rotate secrets with AWS Secrets Manager via the AWS CLI |
 
 ### Version Manager Skills
 

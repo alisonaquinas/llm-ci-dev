@@ -9,6 +9,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Secret Management Skills (4 new skills)
+
+- **vault** skill: Manage secrets, tokens, and policies with HashiCorp Vault
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, auth-methods.md, policies-and-leases.md
+  - Content: Homebrew/APT/binary install, dev server, VAULT_ADDR/VAULT_TOKEN/VAULT_NAMESPACE env vars, .vault-token file, HCL server config; vault login/kv get/put/list/delete/patch, vault read/write, token lookup/renew/revoke, auth list, secrets list, lease renew/revoke, -format=json; AppRole workflow (role_id/secret_id for CI), AWS IAM auth, Kubernetes auth, orphan tokens, env vs file token; HCL policy syntax (path/capabilities), vault policy write/read/list, lease TTL, dynamic secrets concept, KV v1 vs v2 differences, namespace isolation
+
+- **bitwarden-cli** skill: Access and manage Bitwarden vault items via the bw CLI
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, auth-and-session.md, item-operations-and-filtering.md
+  - Content: NPM/Homebrew/binary install, bw config server for self-hosted, BW_SESSION/BW_CLIENTID/BW_CLIENTSECRET env vars; bw login/logout/unlock/sync/get/list/create/edit/delete commands, --session flag; API key auth, session lifecycle, device trust, scripted CI/CD auth patterns, bw lock; item types (login/securenote/card/identity), bw list filters (folderid/organizationid/collectionid/search/url), JSON templates for create, bulk export, trash/restore, bw encode
+
+- **1password-cli** skill: Access 1Password secrets and run commands via op CLI
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, secret-references-and-op-run.md, service-accounts-and-connect.md
+  - Content: Homebrew/binary/winget install, op signin, OP_SERVICE_ACCOUNT_TOKEN/OP_CONNECT_HOST/OP_CONNECT_TOKEN env vars, ~/.config/op/config; op signin/item get/list/create/edit/delete/read/run/inject/document get, --format json, --fields flag; op:// secret reference syntax, op run with inline env vars and --env-file, op inject for file templating, GitHub Actions and GitLab CI integration; service account creation/scoping/rotation, 1Password Connect server setup, machine-to-machine auth patterns
+
+- **aws-secretsmanager** skill: Store, retrieve, and rotate secrets with AWS Secrets Manager
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, rotation-and-versions.md, access-control-and-iam.md
+  - Content: AWS CLI install reference (defer to aws skill), IAM permissions for Secrets Manager, KMS CMK setup, VPC endpoint overview, AWS_REGION/AWS_PROFILE env vars; create-secret/get-secret-value/put-secret-value/update-secret/describe-secret/list-secrets/delete-secret/rotate-secret/tag-resource, --query SecretString jq patterns, multi-region replication; automatic rotation with Lambda, rotation schedules, AWSCURRENT/AWSPENDING/AWSPREVIOUS staging labels, list-secret-version-ids, update-secret-version-stage, built-in rotation functions (RDS/Redshift/DocumentDB), custom Lambda structure, CloudTrail monitoring; least-privilege IAM templates (read-only/manage/rotation Lambda), resource-based policies for cross-account access, KMS key policies, tag-based access control, CloudTrail audit, VPC endpoint
+
 #### Package & Build Manager Skills (10 new skills)
 
 ##### Node.js

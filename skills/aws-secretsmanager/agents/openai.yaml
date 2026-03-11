@@ -1,0 +1,4 @@
+interface:
+  display_name: "AWS Secrets Manager"
+  short_description: "Store and retrieve secrets with AWS Secrets Manager"
+  default_prompt: "Use $aws secretsmanager to retrieve secrets at runtime with least-privilege IAM policies and avoid logging secret values."
