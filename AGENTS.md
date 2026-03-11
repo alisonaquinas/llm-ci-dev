@@ -18,8 +18,8 @@ Skills work identically in both **Claude Code** and **Codex** without modificati
 ```text
 llm-ci-cd-skills/
 ├── .claude-plugin/plugin.json   # Claude Code plugin registration (ignored by Codex)
-├── linting/                     # Skill linting system (under development)
-├── validation/                  # Skill validation system (under development)
+├── linting/                     # Skill linting system (lint-skill.sh, lint-all.sh)
+├── validation/                  # Skill validation system (rubric, public-references, validate-skill.sh)
 ├── skills/                      # One subdirectory per skill
 │   └── <skill-name>/
 │       ├── SKILL.md             # Required: frontmatter + instructions

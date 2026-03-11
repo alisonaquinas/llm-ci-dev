@@ -171,6 +171,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - 4 reference docs: navigation.md, quick-reference.md, jsm-cloud-reference.md, api-reference.md
   - Content: JSM Cloud product overview, doc site structure, queue/SLA/portal/request type configuration, ITSM processes (incident/change/problem management), Assets (IT asset management), Knowledge Base integration, JSM REST API endpoints, authentication, pagination, asset management operations
 
+### Improved
+
+#### Skill Inline Examples (42 skills)
+
+- Added a second inline code block to every SKILL.md that previously had only 1 (or 0) code
+  examples, satisfying validation rubric criterion V05 (Example Quality)
+- Examples cover troubleshooting, error recovery, and secondary workflow scenarios for:
+  1password-cli, ansible, asdf, atlassian-cli-docs, aws, aws-secretsmanager, az,
+  bitwarden-cli, ci-architecture, cmake, direnv, flux, github-docs, gitlab-docs, glab,
+  gradle, helm, jenkins-agent, jenkins-docs, jira-docs, jsm-docs, kubectl, kustomize,
+  make, maven, npm, nvm, open-tofu, pip, pipenv, pnpm, poetry, pyenv, rbenv, rovo-docs,
+  rvm, skaffold, terraform, tilt, travis-ci-docs, vault, yaml-linting
+
+#### Validation System (merged from llm-shared-skills)
+
+- Replaced stub `validation/rubric.md` with full 8-criterion V01–V08 rubric including
+  detailed PASS/WARN/FAIL conditions, "How to Fix" examples, and a report template
+- Replaced stub `validation/public-references.md` with 8 prompt engineering standards
+  (Specificity, Diverse Examples, Numbered Workflows, Verification, Failure Modes,
+  Single Responsibility, Output Format, Context Efficiency) with academic references
+- Added `validation/validate-skill.sh` — automated pre-flight emitting structured metrics
+  (line count, section count, code block count, Intent Router detection, safety section)
+- Updated `AGENTS.md` with full V01–V08 rubric table, scoring thresholds, and V08 checklist
+- Fixed `## Reference Files` → `## Intent Router` heading in argocd, containerd, cri-o,
+  and podman SKILL.md files to satisfy V02 (Intent Router Completeness)
+- All 61 skills validated: 0 lint FAILs, 0 validate-skill.sh WARNs (IR/length)
+
 ### Fixed
 
 #### Markdown Lint (2,758 violations resolved)
@@ -297,13 +324,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - AGENTS.md guidance for skill development
 - Linting system imported from llm-shared-skills with 12 validation rules (L01-L12)
 - Markdownlint configuration aligned with skill standards
-
-### Planned
-
-- Docker / Container Registry skills
-- Kubernetes / Helm deployment skills
-- Monitoring and alerting skills (Prometheus, Grafana, etc.)
-- Custom CI/CD patterns and anti-patterns
 
 ---
 

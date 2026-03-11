@@ -200,7 +200,15 @@ Then point Claude Code at this directory as a local plugin source.
 llm-ci-cd-skills/
 ├── .claude-plugin/
 │   └── plugin.json                  # Claude Code plugin registration
-├── skills/                          # One subdirectory per skill (empty for now)
+├── linting/                         # Skill linting system (lint-skill.sh, lint-all.sh)
+├── validation/                      # Skill validation system (rubric.md, public-references.md, validate-skill.sh)
+├── skills/                          # One subdirectory per skill
+│   └── <skill-name>/
+│       ├── SKILL.md                 # Required: frontmatter + instructions
+│       ├── agents/                  # Platform metadata (openai.yaml, claude.yaml)
+│       ├── references/              # Deep docs, loaded on demand
+│       ├── scripts/                 # Executable helpers
+│       └── assets/                  # Templates and output files
 ├── AGENTS.md                        # Guidance for AI agents working in this repo
 ├── CHANGELOG.md                     # Release history
 ├── INSTALL.md                       # Installation instructions
