@@ -52,6 +52,12 @@ make clean
 - Be explicit about target dependencies to avoid incorrect incremental builds.
 - Avoid spaces in Makefile recipe lines — **recipes must be indented with a tab**, not spaces.
 
+```bash
+# Troubleshoot: list all targets and trace why a target is rebuilding
+make -n build          # dry-run to see commands
+make --print-data-base | grep "^[a-zA-Z]" | sort
+```
+
 ## Related Skills
 
 - **cmake** — cross-platform build system generator that can emit Makefiles

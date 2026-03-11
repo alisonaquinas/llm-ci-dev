@@ -69,6 +69,13 @@ helm list -A
 6. Verify: `helm list`, `helm status <release>`, `kubectl get pods -n <namespace>`.
 7. On failure, check: `helm history <release>` and `helm rollback <release>`.
 
+```bash
+# Troubleshoot a failed upgrade: inspect history and roll back
+helm history my-nginx -n my-namespace
+helm rollback my-nginx 1 -n my-namespace
+helm status my-nginx -n my-namespace
+```
+
 ## Related Skills
 
 - **kubectl** — inspect and manage Kubernetes resources created by Helm

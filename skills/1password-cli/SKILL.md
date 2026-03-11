@@ -61,6 +61,12 @@ op run -- env
 5. Use `op inject -i .env.tpl -o .env` for file-based secret injection.
 6. In CI/CD, set `OP_SERVICE_ACCOUNT_TOKEN` as an encrypted secret and use `op run` in pipeline steps.
 
+```bash
+# CI service account example: inject secrets without interactive sign-in
+export OP_SERVICE_ACCOUNT_TOKEN="ops_eyJzaWduSW5BZGRyZXNzIjoiaHR0cHM..."
+op run -- printenv | grep MY_API_KEY
+```
+
 ## Related Skills
 
 - **aws** — AWS CLI; combine with 1Password to retrieve AWS credentials at runtime

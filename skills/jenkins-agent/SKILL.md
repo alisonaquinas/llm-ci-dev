@@ -62,6 +62,14 @@ java -jar agent.jar \
 
 For persistent operation, wrap in systemd service or container.
 
+```bash
+# Troubleshoot a disconnected agent: verify Java version and check connectivity
+java -version
+curl -s http://jenkins.example.com:8080/jnlpJars/agent.jar -o /dev/null -w "%{http_code}"
+# Re-launch after fixing the issue
+java -jar agent.jar -jnlpUrl http://jenkins.example.com:8080/computer/agent-1/slave-agent.jnlp -secret <SECRET_TOKEN>
+```
+
 ---
 
 ## Cross-References

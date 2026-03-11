@@ -21,6 +21,13 @@ description: Operate Azure CLI (`az`) for authentication checks, subscription/co
 4. Require explicit user confirmation before write/delete commands.
 5. Re-run context checks and summarize outcomes.
 
+```bash
+# Log in, confirm active subscription, and list resource groups
+az login
+az account show
+az group list --output table
+```
+
 ## Preflight
 
 Use bundled scripts for deterministic checks:

@@ -21,6 +21,13 @@ description: Operate AWS CLI (`aws`) for authentication checks, profile and regi
 4. Choose a service command track and inspect first.
 5. Require explicit confirmation before mutating commands.
 
+```bash
+# Verify identity, list profiles, and confirm S3 access
+aws sts get-caller-identity
+aws configure list-profiles
+aws s3 ls
+```
+
 ## Preflight
 
 Use bundled scripts:
@@ -53,6 +60,12 @@ Use `--profile` and `--region` explicitly for multi-account workflows.
 - If identity checks fail, verify credentials/profile and re-run `scripts/aws-auth-status.sh`.
 - If region is missing, set `AWS_REGION` or configure region for the active profile.
 - If endpoint/network calls fail, capture diagnostics first and retry when connectivity is available.
+
+```bash
+# Diagnose auth failures: show current credentials and active profile config
+aws configure list
+aws sts get-caller-identity --profile default
+```
 
 ## References
 

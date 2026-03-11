@@ -47,6 +47,12 @@ The GitLab docs are organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For version-specific docs, append `/17.x/` (current version) to the base URL if needed
 
+```text
+# Navigate to a specific CI/CD keyword by constructing its URL
+# Pattern: https://docs.gitlab.com/ci/yaml/#<keyword>
+Use WebFetch on https://docs.gitlab.com/ci/yaml/ to browse all .gitlab-ci.yml keywords
+```
+
 ### Common WebFetch Patterns
 
 ```text

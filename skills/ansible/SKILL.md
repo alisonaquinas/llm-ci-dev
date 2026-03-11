@@ -57,6 +57,12 @@ ansible-playbook -i inventory.ini site.yml --check --diff
 - Running as root (`become: true`) requires explicit approval — confirm privilege escalation scope.
 - Protect secrets with `ansible-vault encrypt` — never commit plaintext passwords.
 
+```bash
+# Install a role then dry-run the playbook to preview changes
+ansible-galaxy role install geerlingguy.java
+ansible-playbook -i inventory.ini site.yml --check --diff
+```
+
 ## Workflow
 
 1. Define or update inventory.

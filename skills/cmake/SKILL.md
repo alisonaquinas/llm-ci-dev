@@ -49,6 +49,13 @@ cmake --install build --prefix /usr/local
 - Commit `CMakePresets.json` for reproducible configurations, but add `build/` to `.gitignore`.
 - Pin `cmake_minimum_required(VERSION X.Y)` to avoid behavior changes across CMake versions.
 
+```bash
+# Troubleshoot a broken build: clean and reconfigure with verbose output
+rm -rf build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
+cmake --build build --verbose 2>&1 | tail -20
+```
+
 ## Related Skills
 
 - **make** — GNU Make, often the underlying build tool used by CMake's Unix Makefiles generator

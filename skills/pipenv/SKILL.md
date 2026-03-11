@@ -56,6 +56,13 @@ pipenv sync
 4. Run `pipenv sync` in CI to install the exact locked versions.
 5. Commit both `Pipfile` and `Pipfile.lock`.
 
+```bash
+# Troubleshoot environment issues: verify the venv path and check for conflicts
+pipenv --venv
+pipenv check
+pipenv graph
+```
+
 ## Related Skills
 
 - **poetry** — alternative tool using `pyproject.toml` with build and publish support

@@ -47,6 +47,12 @@ terraform destroy
 - Use `-target` sparingly; it can leave state inconsistent.
 - Enable state locking on remote backends to prevent concurrent modifications.
 
+```bash
+# Inspect managed resources in state before making changes
+terraform state list
+terraform state show aws_instance.web
+```
+
 ## Workflow
 
 1. Write or edit `.tf` configuration files.

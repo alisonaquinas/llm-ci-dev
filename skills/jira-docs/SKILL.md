@@ -50,6 +50,12 @@ The Jira documentation is organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For REST API lookups, use the API reference to find endpoint paths and parameters
 
+```text
+# Navigate to a specific REST API endpoint page
+# Pattern: https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-<group>/#api-<path>
+Use WebFetch on https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-post
+```
+
 ### Common WebFetch Patterns
 
 ```text

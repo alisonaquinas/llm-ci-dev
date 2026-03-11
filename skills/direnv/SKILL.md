@@ -54,6 +54,14 @@ direnv reload
 4. Verify environment variables are set with `direnv status` or `echo $VAR`.
 5. When `.envrc` changes, run `direnv allow` again.
 
+```bash
+# Troubleshoot: check if .envrc is blocked, then re-approve after review
+direnv status
+cat .envrc          # review contents before trusting
+direnv allow
+direnv reload
+```
+
 ## Related Skills
 
 - **nvm** — Node.js version manager, integrates with direnv via `layout node`

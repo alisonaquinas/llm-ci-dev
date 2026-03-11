@@ -56,6 +56,13 @@ nvm ls
 4. Pin the project version by writing `<version>` to `.nvmrc` and committing it.
 5. In CI, run `nvm install` (reads `.nvmrc`) followed by `nvm use`.
 
+```bash
+# Troubleshoot: nvm command not found in a new shell session
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm --version
+```
+
 ## Related Skills
 
 - **npm** — Node.js package manager used alongside nvm

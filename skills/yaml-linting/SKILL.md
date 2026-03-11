@@ -70,6 +70,12 @@ For detailed config options, load the Configuration reference.
 | 1 | Linting errors detected |
 | 2 | Invalid configuration or unreadable files |
 
+```bash
+# Troubleshoot: run with parsable output to locate exact line/column of errors
+docker run --rm -v "$(pwd):/data" pipelinecomponents/yamllint \
+  yamllint -f parsable /data/file.yml
+```
+
 ---
 
 ## Related References

@@ -49,6 +49,12 @@ The Rovo documentation is organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For Rovo Dev CLI details, consult the Rovo Dev Reference
 
+```text
+# Navigate to a specific Rovo Dev CLI page
+# Pattern: https://support.atlassian.com/rovo/docs/<page-slug>/
+Use WebFetch on https://support.atlassian.com/rovo/docs/work-with-rovo-dev/ to find all Rovo Dev CLI topics
+```
+
 ### Common WebFetch Patterns
 
 ```text

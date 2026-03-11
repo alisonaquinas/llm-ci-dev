@@ -54,6 +54,12 @@ mvn install
 - Prefer the `mvnw` (Maven wrapper) script when present — it guarantees a consistent Maven version across environments.
 - Avoid committing `~/.m2/settings.xml` secrets to version control; use CI secret injection instead.
 
+```bash
+# Troubleshoot dependency conflicts: inspect the tree and resolve duplication
+mvn dependency:tree -Dincludes=com.fasterxml.jackson.core
+mvn dependency:analyze
+```
+
 ## Related Skills
 
 - **gradle** — alternative JVM build tool using Groovy/Kotlin DSL

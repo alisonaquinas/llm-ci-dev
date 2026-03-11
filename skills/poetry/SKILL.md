@@ -57,6 +57,13 @@ poetry run python main.py
 4. Run `poetry build` then `poetry publish --dry-run` before any release.
 5. Commit both `pyproject.toml` and `poetry.lock`.
 
+```bash
+# Troubleshoot environment issues: inspect the venv path and check dependency resolution
+poetry env info
+poetry check
+poetry show --tree
+```
+
 ## Related Skills
 
 - **pipenv** — alternative workflow combining pip and virtualenv into one tool

@@ -59,6 +59,12 @@ tofu destroy
 - Enable state locking on remote backends to prevent concurrent modifications.
 - OpenTofu's built-in state encryption adds an extra layer of protection.
 
+```bash
+# Inspect managed resources in state before making changes
+tofu state list
+tofu state show aws_instance.web
+```
+
 ## Workflow
 
 1. Write or edit `.tf` configuration files (HCL is identical to Terraform).

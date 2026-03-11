@@ -59,6 +59,13 @@ tilt down
 5. Run `tilt up` for local development or `tilt ci` for automated pipelines.
 6. Use `live_update` sync rules to push file changes without a full image rebuild.
 
+```bash
+# Troubleshoot a resource that is not becoming ready: check logs and force a rebuild
+tilt logs my-service
+tilt trigger my-service
+tilt get uiresource my-service
+```
+
 ## Related Skills
 
 - **kubectl** — direct Kubernetes resource inspection alongside Tilt

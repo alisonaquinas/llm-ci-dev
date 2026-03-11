@@ -64,6 +64,13 @@ skaffold render
 5. Use profiles (`--profile`) to switch between dev, staging, and prod configurations.
 6. Run `skaffold render` to inspect manifests before committing to a deploy.
 
+```bash
+# Troubleshoot a failed CI deploy: check config validity then inspect rendered manifests
+skaffold diagnose
+skaffold render --profile ci
+kubectl apply --dry-run=client -f -
+```
+
 ## Related Skills
 
 - **kubectl** — direct Kubernetes resource management

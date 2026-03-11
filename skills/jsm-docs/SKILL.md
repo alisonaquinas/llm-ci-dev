@@ -50,6 +50,12 @@ The JSM documentation is organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For REST API lookups, use the api-reference to find endpoint paths and parameters
 
+```text
+# Navigate to a specific JSM REST API endpoint page
+# Pattern: https://developer.atlassian.com/cloud/jira/service-desk/rest/api-group-<group>/
+Use WebFetch on https://developer.atlassian.com/cloud/jira/service-desk/rest/api-group-servicedesk/
+```
+
 ### Common WebFetch Patterns
 
 ```text

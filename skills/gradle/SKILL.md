@@ -49,6 +49,12 @@ description: Build and manage Java and Android projects with Gradle. Use when ta
 - Avoid the Gradle daemon inside Docker containers — the daemon may hold file locks or consume unexpected memory.
 - Never commit secrets in `gradle.properties`; inject sensitive values via CI environment variables.
 
+```bash
+# Troubleshoot a failing build: check dependency conflicts and run with full stacktrace
+./gradlew dependencies --configuration runtimeClasspath
+./gradlew build --no-daemon --stacktrace 2>&1 | tail -30
+```
+
 ## Related Skills
 
 - **maven** — alternative JVM build tool using XML (pom.xml)

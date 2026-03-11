@@ -55,6 +55,13 @@ rbenv version
 4. Confirm with `rbenv version` and `ruby -v`.
 5. After `bundle install`, run `rbenv rehash` to register new binstubs.
 
+```bash
+# Troubleshoot: gem binary not found after install, refresh shims
+gem install bundler
+rbenv rehash
+rbenv which bundler
+```
+
 ## Related Skills
 
 - **rvm** — alternative Ruby version manager with built-in gemset support

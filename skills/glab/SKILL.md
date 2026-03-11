@@ -60,6 +60,13 @@ export GLAB_CONFIG_DIR=/tmp/glab-config
 - If host context is wrong, verify config and re-check with `scripts/glab-context.sh`.
 - If network/API calls fail, collect `scripts/glab-diagnostics.sh --json` output before retry.
 
+```bash
+# Verify auth and inspect the current merge request in the working branch
+glab auth status
+glab mr list --state=opened
+glab mr view
+```
+
 ## References
 
 - `references/command-cookbook.md`

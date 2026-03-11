@@ -60,6 +60,13 @@ vault kv get secret/myapp
 5. Use AppRole or Kubernetes auth for automated pipelines instead of static tokens.
 6. Monitor lease TTLs and renew or revoke as appropriate.
 
+```bash
+# Troubleshoot an expired token: look up current token info and renew if possible
+vault token lookup
+vault token renew
+vault status
+```
+
 ## Related Skills
 
 - **aws** — AWS CLI; also covers AWS IAM auth used with Vault's AWS auth method

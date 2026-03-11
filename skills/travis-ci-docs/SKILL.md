@@ -49,12 +49,23 @@ Travis CI for open-source projects is less commonly used for new projects since 
 - Projects on GitLab or Bitbucket using Travis CI
 - CI/CD strategy evaluation
 
+```text
+# Browse the top-level user guide section to discover available topics
+Use WebFetch on https://docs.travis-ci.com/user/ to list all user guide pages
+```
+
 ### How to Look Up Documentation
 
 1. Identify the topic (.travis.yml configuration, stages, caching, deployment)
 2. Start with the appropriate section URL from above
 3. Use WebFetch to load the page and extract relevant details
 4. For language-specific setup, visit the appropriate language guide URL
+
+```text
+# Navigate to a language-specific guide
+# Pattern: https://docs.travis-ci.com/user/language-<name>/
+Use WebFetch on https://docs.travis-ci.com/user/language-python/ to find Python build configuration
+```
 
 ---
 

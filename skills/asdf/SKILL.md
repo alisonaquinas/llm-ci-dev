@@ -40,6 +40,13 @@ asdf current
 - **List installed:** `asdf list <name>`
 - **Reshim binaries:** `asdf reshim <name>`
 
+```bash
+# Troubleshoot missing binary after npm global install
+npm install -g typescript
+asdf reshim nodejs
+which tsc   # should now resolve to the asdf shim
+```
+
 ## Safety Guardrails
 
 - Run `asdf reshim <name>` after installing packages that provide new CLI binaries (e.g. after `npm install -g`).

@@ -64,6 +64,14 @@ flux get all
 5. Monitor reconciliation with `flux get all` and `flux events`.
 6. On failure, use `flux logs` and `kubectl describe` on the failing CRD object to diagnose.
 
+```bash
+# Troubleshoot a stuck reconciliation: suspend, inspect, then resume
+flux suspend kustomization my-app
+kubectl describe kustomization my-app -n flux-system
+flux resume kustomization my-app
+flux get kustomization my-app
+```
+
 ## Related Skills
 
 - **kubectl** — inspect Kubernetes resources managed by Flux

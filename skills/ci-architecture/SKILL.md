@@ -115,6 +115,19 @@ Reduces MTTR and human decision-making under pressure.
 
 A canonical pipeline has these stages:
 
+```bash
+# Minimal GitHub Actions job illustrating the fail-fast stage order
+# .github/workflows/ci.yml excerpt
+# jobs:
+#   ci:
+#     steps:
+#       - uses: actions/checkout@v4
+#       - run: npm run lint
+#       - run: npm test
+#       - run: npm run build
+echo "Lint -> Test -> Build order enforced"
+```
+
 ```text
 Trigger (push, PR, schedule)
   ↓

@@ -47,6 +47,12 @@ The Jenkins docs are organized around these top-level sections:
 4. When looking up plugin-specific details, search plugins.jenkins.io for the plugin name
 5. For pipeline steps, consult the `/doc/pipeline/steps/` reference or check individual plugin docs
 
+```text
+# Navigate to a specific plugin's documentation page
+# Pattern: https://plugins.jenkins.io/<plugin-name>/
+Use WebFetch on https://plugins.jenkins.io/git/ to find Git plugin documentation
+```
+
 ### Common WebFetch Patterns
 
 ```text

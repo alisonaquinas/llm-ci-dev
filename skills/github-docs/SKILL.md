@@ -47,6 +47,12 @@ The GitHub docs are organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For GitHub Enterprise, replace `/en` with `/en/enterprise-server@x.x` in the URL
 
+```text
+# Navigate to a specific Actions topic by constructing its URL
+# Pattern: https://docs.github.com/en/actions/<category>/<page-slug>
+Use WebFetch on https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows
+```
+
 ### Common WebFetch Patterns
 
 ```text

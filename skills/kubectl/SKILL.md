@@ -56,6 +56,12 @@ kubectl apply -f deployment.yaml
 - Never run `kubectl delete namespace <name>` without explicit user confirmation; it deletes all resources in the namespace.
 - Prefer `kubectl rollout undo` over direct manifest rewrites for reverting deployments.
 
+```bash
+# Troubleshoot a crashing pod: check recent events then inspect previous container logs
+kubectl get events --sort-by=.lastTimestamp -n my-namespace
+kubectl logs my-pod --previous -n my-namespace
+```
+
 ## Workflow
 
 1. Confirm context: `kubectl config current-context` and `kubectl config get-contexts`.

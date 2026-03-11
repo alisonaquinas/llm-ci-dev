@@ -55,6 +55,13 @@ rvm list
 4. Write `.ruby-version` and `.ruby-gemset` (or use `rvm --create --ruby-version use`) to autoswitch.
 5. Run `bundle install` to install project gems into the active gemset.
 
+```bash
+# Troubleshoot: rvm not found in a sub-shell, source the shell function manually
+source "$HOME/.rvm/scripts/rvm"
+rvm current
+rvm list
+```
+
 ## Related Skills
 
 - **rbenv** — alternative Ruby version manager (lighter weight, no gemsets)

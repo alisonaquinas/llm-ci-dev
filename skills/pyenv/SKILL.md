@@ -55,6 +55,13 @@ pyenv version
 4. For a project, `cd` into the directory and run `pyenv local <version>`.
 5. Create a virtualenv: `pyenv virtualenv <version> <name>` and activate it.
 
+```bash
+# Troubleshoot: python command resolves to wrong version, force-reinitialize shims
+pyenv which python
+pyenv rehash
+pyenv version
+```
+
 ## Related Skills
 
 - **pip** — Python package installer used within pyenv-managed environments

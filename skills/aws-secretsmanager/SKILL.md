@@ -62,6 +62,18 @@ aws secretsmanager put-secret-value \
 5. Enable automatic rotation for database credentials using built-in Lambda rotation functions.
 6. Tag secrets for cost allocation and access control.
 
+```bash
+# Create a JSON-structured secret for database credentials
+aws secretsmanager create-secret \
+  --name "myapp/prod/db-credentials" \
+  --secret-string '{"user":"db_user","pass":"s3cr3t"}'
+
+# Retrieve and parse the JSON secret value
+aws secretsmanager get-secret-value \
+  --secret-id "myapp/prod/db-credentials" \
+  --query SecretString --output text | python3 -c "import sys,json; s=json.load(sys.stdin); print(s['user'])"
+```
+
 ## Related Skills
 
 - **aws** — general AWS CLI setup, credential management, profiles, and cross-service patterns

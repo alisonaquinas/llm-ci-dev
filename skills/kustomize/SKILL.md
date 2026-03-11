@@ -57,6 +57,12 @@ kustomize build ./overlays/production | kubectl apply -f -
 4. Apply: `kubectl apply -k ./overlays/<env>`.
 5. Verify rollout: `kubectl rollout status deployment/<name> -n <namespace>`.
 
+```bash
+# Troubleshoot rendered output: build and count resources, then search for a specific resource
+kustomize build ./overlays/production | grep "^kind:"
+kustomize build ./overlays/production | kubectl apply --dry-run=client -f -
+```
+
 ## Related Skills
 
 - **kubectl** — apply and manage resources built by kustomize

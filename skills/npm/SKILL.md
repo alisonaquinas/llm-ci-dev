@@ -59,6 +59,13 @@ npm publish --dry-run
 5. In CI, use `npm ci` for a clean, reproducible install.
 6. Publish with `npm publish --dry-run` first, then `npm publish` after confirming the output.
 
+```bash
+# Troubleshoot peer dependency conflicts and fix audit issues
+npm install --legacy-peer-deps
+npm audit fix
+npm ls <package-name>
+```
+
 ## Related Skills
 
 - **yarn** — alternative package manager with Berry and Classic modes

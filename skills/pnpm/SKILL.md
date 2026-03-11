@@ -58,6 +58,13 @@ pnpm stores all package files in a single global content-addressable store (defa
 - Run `pnpm store prune` periodically to remove orphaned files from the global store.
 - Commit `pnpm-lock.yaml` to version control; never `.gitignore` it.
 
+```bash
+# Troubleshoot phantom dependency errors: check store integrity and prune orphans
+pnpm store status
+pnpm store prune
+pnpm install --frozen-lockfile
+```
+
 ## Related Skills
 
 - **npm** — the default Node.js package manager; pnpm is a drop-in alternative

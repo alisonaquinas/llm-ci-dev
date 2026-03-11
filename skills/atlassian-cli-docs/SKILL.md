@@ -48,6 +48,13 @@ The ACLI documentation is organized around these top-level sections:
 4. When the specific page is unknown, load the quick-reference to find the most common pages
 5. For CI pipeline patterns, consult the CI Integration reference
 
+```text
+# Navigate to a specific command page by constructing its URL
+# Pattern: https://developer.atlassian.com/cloud/acli/reference/<subcommand>/<action>/
+# Example: look up how to create a Jira work item
+Use WebFetch on https://developer.atlassian.com/cloud/acli/reference/jira/workitem/create/
+```
+
 ### Common WebFetch Patterns
 
 ```text

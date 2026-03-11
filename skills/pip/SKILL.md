@@ -51,6 +51,13 @@ pip freeze > requirements.txt
 - Pin exact versions (`==`) in deployment requirements to ensure reproducible installs.
 - Run `pip check` after installs to surface dependency conflicts early.
 
+```bash
+# Troubleshoot dependency conflicts: check for broken requirements and show package info
+pip check
+pip show requests
+pip list --outdated
+```
+
 ## Related Skills
 
 - **poetry** — dependency management and packaging with lock files and build system

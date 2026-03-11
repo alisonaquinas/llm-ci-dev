@@ -60,6 +60,15 @@ bw get password "My App Login"
 5. Use `bw get` or `bw list` to retrieve secrets.
 6. Run `bw lock` when finished.
 
+```bash
+# Headless API key auth pattern for CI (no interactive prompt)
+export BW_CLIENTID="user.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+export BW_CLIENTSECRET="XXXXXXXXXXXXXXXXXXXXXXXX"
+bw login --apikey
+export BW_SESSION=$(bw unlock --passwordenv BW_CLIENTSECRET --raw)
+bw get password "My CI Token"
+```
+
 ## Related Skills
 
 - **ci-architecture** — patterns for injecting secrets from Bitwarden into pipeline jobs
