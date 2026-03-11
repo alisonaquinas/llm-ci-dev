@@ -1,5 +1,4 @@
-# llm ignore this!
-
+# llm ignore this
 
    **Container & Orchestration:**
 
@@ -143,9 +142,6 @@
 - mongosh — MongoDB CLI
 - redis-cli — Redis CLI
 
-
-
-
 **Configuration Management:**
 
 - kubectl — Kubernetes CLI (extensively referenced)
@@ -166,7 +162,6 @@
 - puppet — Configuration management
 - chef — Configuration management
 - salt — Configuration management
-
 
    **Package Managers & Build Tools:**
 
@@ -194,4 +189,3 @@
 - snyk — Vulnerability scanner
 - aqua — Container security
 - checkov — Infrastructure security scanning
-

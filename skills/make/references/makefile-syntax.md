@@ -6,7 +6,7 @@ A Makefile rule has three parts:
 
 ```makefile
 target: prerequisites
-	recipe
+ recipe
 ```
 
 - **target** — the file to build, or a phony action name
@@ -15,7 +15,7 @@ target: prerequisites
 
 ```makefile
 main.o: main.c utils.h
-	gcc -c main.c -o main.o
+ gcc -c main.c -o main.o
 ```
 
 ## Variables
@@ -45,7 +45,7 @@ SRCS    := $(wildcard src/*.c)
 
 ```makefile
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+ $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ## .PHONY Declaration
@@ -58,7 +58,7 @@ Declare targets that do not represent files to prevent conflicts with same-named
 all: myapp
 
 clean:
-	rm -f *.o myapp
+ rm -f *.o myapp
 ```
 
 ## .DEFAULT_GOAL
@@ -69,7 +69,7 @@ Override which target runs when `make` is called with no arguments:
 .DEFAULT_GOAL := build
 
 build: main.o
-	$(CC) -o myapp main.o
+ $(CC) -o myapp main.o
 ```
 
 ## Multi-Line Variables
@@ -82,5 +82,5 @@ Usage:
 endef
 
 help:
-	@echo "$(HELP_TEXT)"
+ @echo "$(HELP_TEXT)"
 ```

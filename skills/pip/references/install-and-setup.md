@@ -23,7 +23,7 @@ Inside a virtual environment, `pip` and `python -m pip` refer to the same binary
 pip reads configuration from the following locations (later entries override earlier ones):
 
 | Platform  | System-wide                        | User-level                         |
-|-----------|------------------------------------|------------------------------------|
+| ----------- | ------------------------------------ | ------------------------------------ |
 | Linux     | `/etc/pip.conf`                    | `~/.config/pip/pip.conf`           |
 | macOS     | `/Library/Application Support/pip/pip.conf` | `~/Library/Application Support/pip/pip.conf` |
 | Windows   | `C:\ProgramData\pip\pip.ini`       | `%APPDATA%\pip\pip.ini`            |

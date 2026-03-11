@@ -9,6 +9,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+#### Kubernetes Tooling Skills (7 new skills)
+
+- **kubectl** skill: Manage Kubernetes resources, contexts, and workloads with kubectl
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, resource-management.md, troubleshooting.md
+  - Content: install by platform (curl, Homebrew, apt/yum, asdf), kubeconfig and KUBECONFIG env var, multi-context management; get/describe/apply/delete/edit, logs with --previous/-f/--since, exec -it, port-forward, rollout status/history/undo, scale, patch, cp, top, --dry-run=client -o yaml, -o jsonpath, kubectl diff; declarative vs imperative, labels and selectors, namespaces, kubectl explain, resource types cheat-sheet, kustomize integration; CrashLoopBackOff/OOMKilled/ImagePullBackOff diagnosis, kubectl describe pod events, kubectl debug ephemeral containers, node pressure, events sorting, resource quota inspection, taints and tolerations
+
+- **helm** skill: Package and deploy Kubernetes applications with Helm charts and releases
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, chart-authoring.md, release-management.md
+  - Content: install by platform (binary, Homebrew, apt, asdf), HELM_DATA_HOME/CACHE_HOME/CONFIG_HOME, repo add/update/list/remove, OCI registry auth; helm install/upgrade --install, --dry-run --debug, list/status/uninstall/rollback/history, get values/manifest/notes, --set/-f, helm template, show values, search repo/hub, pull, OCI commands; Chart.yaml required fields, templates/ structure, values.yaml hierarchy, _helpers.tpl, built-in objects (.Release/.Values/.Chart/.Capabilities), NOTES.txt, helm create/lint/package; release lifecycle, --atomic, --wait, upgrade strategies, helm diff plugin, --namespace/--create-namespace, secrets plugin, multi-env values pattern
+
+- **kustomize** skill: Customize Kubernetes manifests with overlay and base patterns using Kustomize
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, kustomization-structure.md, overlays-and-bases.md
+  - Content: standalone binary install, kubectl built-in apply -k, version mismatch note, KUSTOMIZE_PLUGIN_HOME; kustomize build, pipe to kubectl apply, kubectl diff -k, kustomize edit set image/namespace/nameprefix; kustomization.yaml anatomy, resources/images/configMapGenerator/secretGenerator/namePrefix/patches/replacements; base/overlay layout, environment overlays, strategic merge patches, JSON patches, components:, multi-base overlays, GitOps integration
+
+- **skaffold** skill: Build, push, and deploy to Kubernetes iteratively with Skaffold
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, skaffold-yaml.md, profiles-and-ci.md
+  - Content: install by platform, SKAFFOLD_DEFAULT_REPO, ~/.skaffold/ config; skaffold dev/run/build/deploy/delete/debug/render, --profile, --tail, diagnose, init; skaffold.yaml top-level structure, build.artifacts[], Docker/Buildpacks/Jib/Kaniko builders, kubectl/helm/kustomize deployers, sync.infer; profiles for dev/staging/prod, activation methods, artifact caching, CI integration patterns, --status-check, multi-module repos
+
+- **tilt** skill: Develop Kubernetes services locally with Tilt and Tiltfiles
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, tiltfile-patterns.md, extensions-and-teams.md
+  - Content: install by platform, prerequisites (kind/k3d/minikube), TILT_HOST/TILT_PORT, tilt doctor; tilt up/down/ci/trigger/get/describe/logs, TUI keyboard shortcuts; Starlark Tiltfile, docker_build with live_update, k8s_yaml, k8s_resource, local_resource, helm_resource, include/load, allow_k8s_contexts; Tilt extensions, mono-repo patterns, tilt args, Tilt Cloud, CI mode patterns
+
+- **flux** skill: Manage GitOps Kubernetes deployments with FluxCD sources and Kustomizations
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, gitops-sources.md, kustomizations-and-helmreleases.md
+  - Content: install flux CLI, flux check --pre, bootstrap github/gitlab, GITHUB_TOKEN/GITLAB_TOKEN, flux check; flux get all/sources/kustomizations/helmreleases, reconcile source/kustomization/helmrelease, suspend/resume, diff, events, logs, create secret, export; GitRepository/HelmRepository/OCIRepository/Bucket CRDs, ImageRepository and ImagePolicy, ImageUpdateAutomation, secret types; Kustomization CRD fields (sourceRef/path/prune/interval/dependsOn/healthChecks/postBuild), HelmRelease CRD fields (chart spec/values/valuesFrom/remediation), dependsOn ordering, multi-tenancy
+
+- **argocd** skill: Deploy Kubernetes apps declaratively with Argo CD applications and projects
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, application-management.md, rbac-and-projects.md
+  - Content: install CLI, argocd login, ARGOCD_SERVER/ARGOCD_AUTH_TOKEN/ARGOCD_OPTS, initial admin secret, argocd context; argocd app list/get/create/sync/diff/history/rollback/delete/set, cluster/repo/proj/account commands; Application CRD (source/destination/project/syncPolicy), sync waves and hooks, health status states; AppProject CRD, multi-tenancy, RBAC policy syntax, built-in roles, SSO integration, repository credentials
+
+#### Container Runtime Skills (3 new skills)
+
+- **containerd** skill: Manage containers and images with containerd using ctr and nerdctl
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, containerd-config.md, kubernetes-integration.md
+  - Content: install containerd/nerdctl/CNI plugins/BuildKit, CONTAINERD_ADDRESS/CONTAINERD_NAMESPACE, rootless setup; nerdctl Docker-compatible commands, nerdctl compose, ctr images/containers/tasks/snapshots/content, namespace flag; /etc/containerd/config.toml, CRI plugin section, registry mirrors, snapshotters, SystemdCgroup, containerd config default; containerd as Kubernetes CRI, crictl for pod/container debugging, crictl config, ctr --namespace k8s.io, image GC settings, private registry pull
+
+- **podman** skill: Build and run containers with Podman without a daemon
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, rootless-and-pods.md, podman-compose-and-systemd.md
+  - Content: install by platform, podman machine init/start/stop/ssh, rootless requirements (subuid/subgid), containers.conf/storage.conf/registries.conf, CONTAINER_HOST; podman run/exec/build/push/pull/pod/network/volume commands, generate kube, play kube, machine commands, system prune; rootless architecture, user namespace mapping, slirp4netns/pasta networking, pod infra container, port publishing, podman-remote, SELinux/AppArmor labels; podman-compose, podman generate systemd, Quadlets (.container/.pod/.network/.volume units), podman auto-update
+
+- **cri-o** skill: Configure and debug CRI-O as a Kubernetes container runtime with crictl
+  - 4 reference docs: install-and-setup.md, command-cookbook.md, crio-configuration.md, kubernetes-integration.md
+  - Content: install cri-o by platform (OBS apt, dnf/yum), crictl from cri-tools, /etc/crictl.yaml, CONTAINER_RUNTIME_ENDPOINT, crun/runc, CNI plugins, systemctl enable crio; crictl pods/ps/images/pull/exec/logs/inspect/inspecti/inspectp/runp/stopp/rmp/stats/info; /etc/crio/crio.conf and drop-ins, [crio.runtime]/[crio.image]/[crio.network] sections, OCI hooks, seccomp/AppArmor, crio config --default, systemctl reload crio; kubelet CRI socket config, cgroup-driver alignment, Kubernetes version compatibility, CNI plugin config, OCI runtime selection (runc/crun/kata-containers), image storage, GC tuning
+
 #### Secret Management Skills (4 new skills)
 
 - **vault** skill: Manage secrets, tokens, and policies with HashiCorp Vault
@@ -126,6 +170,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **jsm-docs** skill: Navigate Jira Service Management Cloud documentation at support.atlassian.com/jira-service-management and REST API
   - 4 reference docs: navigation.md, quick-reference.md, jsm-cloud-reference.md, api-reference.md
   - Content: JSM Cloud product overview, doc site structure, queue/SLA/portal/request type configuration, ITSM processes (incident/change/problem management), Assets (IT asset management), Knowledge Base integration, JSM REST API endpoints, authentication, pagination, asset management operations
+
+### Fixed
+
+#### Markdown Lint (2,758 violations resolved)
+
+- Auto-fixed MD031/MD022/MD032/MD010/MD012/MD026/MD047 across all files (blanks around fences/headings/lists, hard tabs, multiple blanks, trailing punctuation, trailing newline)
+- Added language specifiers to 11 bare fenced code blocks in 9 files (`text`, `go`)
+- Fixed compact table separator rows (`|---|` → `| --- |`) in 11 files
+- Fixed `CLAUDE.md` missing top-level H1 heading (MD041)
+- Escaped inline HTML in `skills/az/references/install-and-setup.md` (MD033)
+- Added `.markdownlint.json` for local linting (`MD013` disabled, `MD024` siblings-only, `MD060` disabled)
+- Updated `.markdownlint-cli2.jsonc` (CI): enabled previously-suppressed rules now clean, changed `no-duplicate-heading` from `false` to `{ siblings_only: true }`
 
 ## [0.0.1] - 2026-03-10
 

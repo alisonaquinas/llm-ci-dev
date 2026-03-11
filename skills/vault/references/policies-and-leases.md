@@ -77,6 +77,7 @@ vault list sys/leases/lookup/database/creds/my-role/
 Dynamic secrets are generated on-demand and exist only for the duration of their lease. When the lease expires or is revoked, Vault deletes the credential from the target system.
 
 Common dynamic secrets engines:
+
 - **database** — PostgreSQL, MySQL, Oracle short-lived credentials
 - **aws** — temporary IAM access keys
 - **azure** — Azure service principal credentials

@@ -4,13 +4,13 @@
 
 Secret references use the `op://` URI scheme to point to a specific field in a 1Password item:
 
-```
+```text
 op://<vault>/<item>/<field>
 ```
 
 Examples:
 
-```
+```text
 op://Private/My App Login/password
 op://Shared/Production DB/username
 op://DevOps/AWS Prod/access_key_id

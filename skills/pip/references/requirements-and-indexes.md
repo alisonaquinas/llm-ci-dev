@@ -30,7 +30,7 @@ git+https://github.com/org/repo.git@v1.2.3#egg=mypackage
 ## Version Specifier Summary
 
 | Operator | Meaning                          | Example        |
-|----------|----------------------------------|----------------|
+| ---------- | ---------------------------------- | ---------------- |
 | `==`     | Exact version                    | `pkg==1.2.3`   |
 | `>=`     | Minimum version                  | `pkg>=1.2`     |
 | `~=`     | Compatible release               | `pkg~=1.2.3`   |

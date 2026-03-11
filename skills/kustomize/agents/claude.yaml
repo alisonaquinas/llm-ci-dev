@@ -1,0 +1,4 @@
+interface:
+  display_name: "kustomize"
+  short_description: "Customize Kubernetes manifests with Kustomize overlays"
+  default_prompt: "Use $kustomize build to preview rendered manifests before applying; use kubectl apply -k for direct deployment."

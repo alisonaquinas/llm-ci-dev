@@ -1,0 +1,4 @@
+interface:
+  display_name: "kubectl"
+  short_description: "Manage Kubernetes resources with kubectl"
+  default_prompt: "Use $kubectl to inspect and manage Kubernetes resources; always confirm context and namespace before applying changes."

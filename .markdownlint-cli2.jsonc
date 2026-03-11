@@ -10,19 +10,9 @@
     "config": {
         "default": true,
         "line-length": false,
-        "no-trailing-punctuation": false,
-        "no-inline-html": false,
+        "no-duplicate-heading": { "siblings_only": true },
         "table-column-style": false,
-        "no-duplicate-heading": false,
         // Makefile recipes require hard tabs; allow tabs inside code blocks
         "no-hard-tabs": { "code_blocks": false }
-    },
-    "overrides": [
-        {
-            "files": ["CHANGELOG.md"],
-            "config": {
-                "MD024": false
-            }
-        }
-    ]
+    }
 }

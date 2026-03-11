@@ -1,0 +1,4 @@
+interface:
+  display_name: "Argo CD"
+  short_description: "Deploy Kubernetes apps with Argo CD GitOps workflows"
+  default_prompt: "Use $argocd app sync to trigger deployments; use argocd app diff to preview changes before syncing."

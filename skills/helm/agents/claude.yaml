@@ -1,0 +1,4 @@
+interface:
+  display_name: "helm"
+  short_description: "Package and deploy Kubernetes apps with Helm charts"
+  default_prompt: "Use $helm to install and upgrade Kubernetes applications; always use --dry-run before applying changes to production releases."

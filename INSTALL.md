@@ -40,7 +40,7 @@ Then add to your `~/.claude/settings.json`:
 
 Codex uses a different mechanism. Create symlinks or directory junctions in `~/.codex/skills/`:
 
-### macOS/Linux:
+### macOS/Linux
 
 ```bash
 mkdir -p ~/.codex/skills
@@ -50,7 +50,7 @@ cd ~/.codex/skills
 ln -s /path/to/llm-ci-cd-skills/skills/<skill-name> <skill-name>
 ```
 
-### Windows (PowerShell):
+### Windows (PowerShell)
 
 ```powershell
 mkdir -Path $env:USERPROFILE\.codex\skills -Force

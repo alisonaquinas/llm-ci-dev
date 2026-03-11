@@ -9,7 +9,7 @@ OBJS := main.o utils.o parser.o
 
 # Pattern: each .o file depends on the corresponding .c file
 $(OBJS): %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+ $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ## Implicit Rules
@@ -21,7 +21,7 @@ GNU Make has built-in rules for common file types. These activate automatically:
 # Built-in: %.o from %.cpp (uses CXX, CXXFLAGS)
 # Rely on them by listing the dependency without a recipe:
 myapp: main.o utils.o
-	$(CC) -o $@ $^
+ $(CC) -o $@ $^
 ```
 
 ## Built-In Functions

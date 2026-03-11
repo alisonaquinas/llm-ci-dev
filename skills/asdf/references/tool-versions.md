@@ -14,6 +14,7 @@ golang 1.22.4
 ```
 
 Rules:
+
 - One tool per line: `<tool-name> <version>`
 - Comments with `#` are supported
 - Multiple versions per line are supported (the first is the default)

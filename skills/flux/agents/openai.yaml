@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flux"
+  short_description: "Manage GitOps Kubernetes deployments with Flux"
+  default_prompt: "Use $flux to reconcile GitOps sources and workloads; run flux check and flux diff before making source changes."

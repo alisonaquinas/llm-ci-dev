@@ -1,0 +1,4 @@
+interface:
+  display_name: "Podman"
+  short_description: "Build and run containers with Podman in rootless mode"
+  default_prompt: "Use $podman to build and run containers without a daemon; prefer rootless mode and use podman machine on macOS/Windows."

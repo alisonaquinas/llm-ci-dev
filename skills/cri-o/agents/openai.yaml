@@ -1,0 +1,4 @@
+interface:
+  display_name: "CRI-O"
+  short_description: "Configure and debug CRI-O container runtime for Kubernetes"
+  default_prompt: "Use $crictl to inspect and debug Kubernetes pods and containers managed by CRI-O; always set CONTAINER_RUNTIME_ENDPOINT first."

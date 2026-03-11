@@ -95,7 +95,7 @@ pipx is the recommended way to install tools like `black`, `ruff`, `mypy`, `pre-
 ## System Python vs User Python
 
 | Context           | Recommendation                                    |
-|-------------------|---------------------------------------------------|
+| ------------------- | --------------------------------------------------- |
 | Project work      | Always use a project-level venv                   |
 | CLI tools         | Use pipx                                          |
 | CI/CD             | Create a fresh venv; cache with pip's cache dir   |

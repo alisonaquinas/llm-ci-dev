@@ -88,7 +88,7 @@ Remove the entire `skills/<name>/` directory and delete its row from the `README
 ## Cross-Compatibility Rules
 
 | Concern | Rule |
-|---|---|
+| --- | --- |
 | Body text | Use "the agent", not "Claude" or "Codex" |
 | Platform scripts | Include both `.sh` (bash) and `.ps1` (PowerShell) where relevant |
 | SKILL.md format | Identical for both systems — no system-specific frontmatter |

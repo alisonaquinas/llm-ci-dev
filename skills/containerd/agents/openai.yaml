@@ -1,0 +1,4 @@
+interface:
+  display_name: "containerd"
+  short_description: "Manage containers and images with containerd and nerdctl"
+  default_prompt: "Use $nerdctl for Docker-compatible container operations with containerd; use $ctr only for low-level containerd debugging."

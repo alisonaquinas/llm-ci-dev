@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tilt"
+  short_description: "Develop Kubernetes services locally with Tilt and Tiltfiles"
+  default_prompt: "Use $tilt up to start the local dev loop; define resources in the Tiltfile using docker_build and k8s_yaml."

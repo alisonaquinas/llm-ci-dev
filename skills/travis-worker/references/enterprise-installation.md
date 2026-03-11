@@ -423,7 +423,7 @@ sudo journalctl -u travis-worker -f
 ### WSL2 Network Connectivity Notes
 
 | Resource | Access from WSL2 |
-|---|---|
+| --- | --- |
 | Windows host services | Use host IP: `10.0.0.1` or `host.docker.internal` |
 | RabbitMQ on Windows | `10.0.0.1:5672` (default WSL2 gateway) |
 | Docker Desktop daemon | Shared automatically with WSL2 |

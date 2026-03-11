@@ -81,7 +81,7 @@ Add `.POSIX:` as the very first target in a Makefile to opt into strict POSIX be
 .POSIX:
 
 all:
-	$(CC) -o myapp main.c
+ $(CC) -o myapp main.c
 ```
 
 This disables GNU extensions and improves portability to non-GNU make implementations.

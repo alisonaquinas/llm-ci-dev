@@ -80,7 +80,7 @@ Expected output shows your subscription ID, tenant ID, and display name.
 - You lack permissions on the resource group.
 - Ask your Azure admin to grant appropriate role (Contributor, Owner, etc.).
 
-### "Subscription '<id>' could not be found"
+### "Subscription ID could not be found"
 
 - Subscription doesn't exist or you don't have access.
 - Run `az account list` to see available subscriptions.

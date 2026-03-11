@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skaffold"
+  short_description: "Build and deploy to Kubernetes with Skaffold workflows"
+  default_prompt: "Use $skaffold dev for iterative local development loops; use skaffold run for one-shot CI/CD builds and deploys."

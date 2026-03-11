@@ -46,7 +46,7 @@ direnv status
 
 Example output:
 
-```
+```text
 direnv exec path /path/to/project
 Found RC path /path/to/project/.envrc
 Found watch path /path/to/project/.envrc
