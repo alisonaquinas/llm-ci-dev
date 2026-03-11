@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "description": "Cross-compatible LLM skills for CI/CD pipelines: GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, and deployment workflows.",
   "author": {
-    "name": "Local"
+    "name": "Alison Aquinas"
   }
 }
