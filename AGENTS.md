@@ -149,6 +149,20 @@ Skills should reflect these 8 standards (from `validation/public-references.md`)
 
 ---
 
+## Release Process
+
+Before tagging a release, complete these steps in order:
+
+1. **Update `.claude-plugin/plugin.json`** — set `"version"` to match the release tag (e.g., tag `v1.2.0` → `"version": "1.2.0"`).
+2. **Update `CHANGELOG.md`** — rename `## [Unreleased]` to `## [<version>] - <YYYY-MM-DD>` and ensure all changes since the last release are documented under the correct subsections (`### Added`, `### Improved`, `### Fixed`).
+3. **Commit both files** with a `chore(release):` commit: `chore(release): bump to v<version>`.
+4. **Create an annotated tag**: `git tag -a v<version> -m "Release v<version>"`.
+5. **Push branch and tag**: `git push && git push origin v<version>`.
+
+The `CHANGELOG.md` must always be updated when cutting a release — never tag without it.
+
+---
+
 ## Installing Skills (for agents setting up a new environment)
 
 See `INSTALL.md` for full instructions. The short version:
