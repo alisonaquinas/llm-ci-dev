@@ -32,7 +32,7 @@ op --version
 ### Windows (Winget)
 
 ```powershell
-winget install AgileBits.1PasswordCLI
+winget install AgileBits.1Password.CLI
 
 op --version
 ```
