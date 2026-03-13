@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-03-13
+
 ### Fixed
 
+- `skills/1password-cli`: corrected the Windows winget package ID from `AgileBits.1PasswordCLI` to `AgileBits.1Password.CLI` in the install reference.
 - Added an explicit `text` language tag to the failure example in `docs/release-workflow.md` so repository markdownlint checks pass cleanly.
+- `.claude-plugin/plugin.json`: bumped the published plugin version to `1.1.0`
 
 ## [1.0.1] - 2026-03-11
 
