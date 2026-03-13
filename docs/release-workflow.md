@@ -80,7 +80,7 @@ That's it. The workflow runs automatically.
 
 The workflow will fail immediately at the validation step with:
 
-```
+```text
 ERROR: tag v1.5.0 does not match plugin.json version 1.4.4
 ```
 

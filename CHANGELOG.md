@@ -5,6 +5,12 @@ All notable changes to the llm-ci-cd-skills collection will be documented in thi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Added an explicit `text` language tag to the failure example in `docs/release-workflow.md` so repository markdownlint checks pass cleanly.
+
 ## [1.0.1] - 2026-03-11
 
 ### Added
