@@ -180,6 +180,7 @@ Before tagging a release, complete these steps in order:
 5. **Push branch and tag**: `git push && git push origin v<version>`.
 
 The `CHANGELOG.md` must always be updated when cutting a release — never tag without it.
+
 - The release workflow runs `make test`, then `make all`, attaches `built/*.zip`, and skips marketplace dispatch cleanly when the token is absent.
 
 ---

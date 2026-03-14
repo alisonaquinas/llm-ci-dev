@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-03-14
+
+### Fixed
+
+- inserted the required blank line in `AGENTS.md` and removed the unused import from `scripts/verify_built_zips.py` so the normalized CI and release gates pass their markdown and Python lint steps on GitHub
+
 ## [1.1.1] - 2026-03-14
 
 ### Changed
