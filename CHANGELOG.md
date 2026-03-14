@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2026-03-14
+
+### Changed
+
+- confirmed `llm-ci-dev` as the canonical home for `aws`, `az`, `docker`, and `glab`, preserving the most recent examples and wording improvements while shared duplicates were removed from `llm-shared-skills`
+
 ## [1.1.2] - 2026-03-14
 
 ### Fixed
