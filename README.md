@@ -1,4 +1,4 @@
-# llm-ci-cd-skills
+# llm-ci-dev
 
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
@@ -215,7 +215,7 @@ See [INSTALL.md](INSTALL.md) for full installation instructions.
 
 ```json
 // In ~/.claude/settings.json, add to enabledPlugins:
-"llm-ci-cd-skills@local": true
+"llm-ci-dev@local": true
 ```
 
 Then point Claude Code at this directory as a local plugin source.
@@ -223,7 +223,7 @@ Then point Claude Code at this directory as a local plugin source.
 ## Repository Structure
 
 ```text
-llm-ci-cd-skills/
+llm-ci-dev/
 ├── .claude-plugin/
 │   └── plugin.json                  # Claude Code plugin registration
 ├── linting/                         # Skill linting system (lint-skill.sh, lint-all.sh)

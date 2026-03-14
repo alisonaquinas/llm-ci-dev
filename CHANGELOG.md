@@ -1,11 +1,13 @@
 # Changelog
 
-All notable changes to the llm-ci-cd-skills collection will be documented in this file.
+All notable changes to the llm-ci-dev collection will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.1] - 2026-03-14
 
 ### Changed
 
@@ -13,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - added repo-owned Python packaging helpers and stdlib-only tests so ZIP verification and skill checks behave consistently across Windows-backed WSL and GitHub Actions
 - renamed the primary GitHub Actions quality workflow to `CI` in `.github/workflows/ci.yml` and aligned release automation to run `make test`, build `built/*.zip`, attach artifacts, and skip marketplace dispatch cleanly when the token is missing
 - kept `linting/` and `validation/` shell entrypoints as compatibility wrappers around the new Python baseline for one release cycle
+- aligned the public repo and plugin identity on `llm-ci-dev` so plugin metadata, install examples, and human-facing docs now match the actual repo name and ZIP archive root
+- fully self-contained the release workflow by provisioning `jq` explicitly and updated the release guide to match the automated `make test` + `make all` release path and optional marketplace dispatch behavior
 
 ## [1.1.0] - 2026-03-13
 

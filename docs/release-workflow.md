@@ -5,21 +5,19 @@ This document describes how to cut a release for this skill package.
 ## Overview
 
 Releases are tag-driven. Pushing a `vX.Y.Z` tag to `main` triggers the
-[`release.yml`](../.github/workflows/release.yml) workflow which:
+[`release.yml`](../.github/workflows/release.yml) workflow, which:
 
-1. Validates the tag matches the version in `.claude-plugin/plugin.json`
-2. Extracts the matching changelog entry from `CHANGELOG.md`
-3. Creates a GitHub Release with those notes
-4. Fires a `repository_dispatch` event to the
-   [Claude Plugin Marketplace](https://github.com/alisonaquinas/llm-skills),
-   triggering an automatic rebuild and republish
+1. Provisions its own release prerequisites on the GitHub runner
+2. Reads `.claude-plugin/plugin.json` and validates that the tag matches the plugin version
+3. Runs `make test`
+4. Runs `make all` to build fresh ZIP bundles in `built/`
+5. Extracts the matching changelog entry from `CHANGELOG.md`
+6. Creates a GitHub Release and attaches `built/*.zip`
+7. Dispatches a marketplace rebuild only when `MARKETPLACE_DISPATCH_TOKEN` is configured
 
-The marketplace at `https://alisonaquinas.github.io/llm-skills/` will reflect
-the new version within ~2 minutes of tagging.
+If the marketplace token is absent, the release still succeeds and the dispatch step is skipped cleanly.
 
----
-
-## Step-by-step release guide
+## Release Steps
 
 ### 1. Update the version in `plugin.json`
 
@@ -28,40 +26,30 @@ Edit `.claude-plugin/plugin.json` and bump the `version` field following
 
 ```json
 {
-  "name": "llm-ci-cd-skills",
+  "name": "llm-ci-dev",
   "version": "1.5.0",
   ...
 }
 ```
 
-| Change type | When to use | Example |
-|-------------|-------------|---------|
-| **patch** `1.4.4 → 1.4.5` | Bug fixes, typo corrections | Fixed a broken reference link |
-| **minor** `1.4.4 → 1.5.0` | New skills added, non-breaking changes | Added `ripgrep` skill |
-| **major** `1.4.4 → 2.0.0` | Breaking changes to skill format/structure | Restructured all SKILL.md frontmatter |
-
 ### 2. Update `CHANGELOG.md`
 
-Add a new section at the top of the changelog (above the previous release):
+Move the pending `Unreleased` notes into a new release section:
 
 ```markdown
-## [1.5.0] — 2026-03-15
+## [1.5.0] - 2026-03-15
 
 ### Added
-- `ripgrep` skill with search patterns reference
-
-### Fixed
-- Corrected broken link in `git` references
+- Example release note
 ```
 
-The `awk` step in the workflow extracts everything between
-`## [1.5.0]` and the next `## [` heading — so keep the format consistent.
+The workflow extracts everything between `## [1.5.0]` and the next `## [` heading, so keep release headings consistent.
 
-### 3. Commit
+### 3. Commit the release metadata
 
 ```bash
 git add .claude-plugin/plugin.json CHANGELOG.md
-git commit -m "chore: release v1.5.0"
+git commit -m "chore(release): cut v1.5.0"
 ```
 
 ### 4. Tag and push
@@ -72,38 +60,39 @@ git push
 git push --tags
 ```
 
-That's it. The workflow runs automatically.
+The workflow handles runner setup, testing, ZIP builds, and release publishing automatically.
 
----
+## Workflow Behavior
 
-## What happens if the tag doesn't match `plugin.json`?
+The release workflow provisions the tools it needs before testing, including:
 
-The workflow will fail immediately at the validation step with:
+- `make`, `zip`, `unzip`, and `jq`
+- Python plus `ruff` and `yamllint`
+- Node 20 and `markdownlint-cli2`
 
-```text
-ERROR: tag v1.5.0 does not match plugin.json version 1.4.4
-```
-
-Fix: delete the tag, update `plugin.json`, recommit, and re-tag.
+After setup it runs:
 
 ```bash
-git tag -d v1.5.0
-git push origin :refs/tags/v1.5.0
-# fix plugin.json, commit, then:
-git tag v1.5.0
-git push --tags
+make test
+make all
 ```
 
----
+The resulting `built/*.zip` files are attached to the GitHub release.
 
-## Required secret: `MARKETPLACE_DISPATCH_TOKEN`
+## Tag / Version Mismatch
 
-The workflow needs a secret named `MARKETPLACE_DISPATCH_TOKEN` to be set in
-this repo's GitHub settings (**Settings → Secrets and variables → Actions**).
+If the tag does not match `.claude-plugin/plugin.json`, the workflow fails during validation.
 
-This is a fine-grained Personal Access Token (PAT) belonging to
-`alisonaquinas` with **Contents: write** permission scoped to the
-`alisonaquinas/llm-skills` repository only.
+```text
+ERROR: tag v1.5.0 does not match plugin.json version v1.4.4
+```
 
-It is **not** the default `GITHUB_TOKEN` — that only has access to this repo.
-Contact the repo owner if you need this token rotated.
+Fix the version mismatch, recommit, and recreate the tag.
+
+## Optional Secret: `MARKETPLACE_DISPATCH_TOKEN`
+
+`MARKETPLACE_DISPATCH_TOKEN` is optional. When configured in
+**Settings -> Secrets and variables -> Actions**, the workflow sends a
+`repository_dispatch` event to `alisonaquinas/llm-skills` after the GitHub release is created.
+
+If the secret is missing, the workflow logs that marketplace dispatch is being skipped and still publishes the release normally.

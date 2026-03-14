@@ -9,10 +9,10 @@
 ```json
 {
   "enabledPlugins": {
-    "llm-ci-cd-skills@local": true
+    "llm-ci-dev@local": true
   },
   "pluginDirs": [
-    "/path/to/llm-ci-cd-skills"
+    "/path/to/llm-ci-dev"
   ]
 }
 ```
@@ -23,7 +23,7 @@ Restart Claude Code, and the skills will be automatically loaded.
 
 ```bash
 mkdir -p ~/.claude/plugins
-git clone <repo-url> ~/.claude/plugins/llm-ci-cd-skills
+git clone <repo-url> ~/.claude/plugins/llm-ci-dev
 ```
 
 Then add to your `~/.claude/settings.json`:
@@ -31,7 +31,7 @@ Then add to your `~/.claude/settings.json`:
 ```json
 {
   "enabledPlugins": {
-    "llm-ci-cd-skills@local": true
+    "llm-ci-dev@local": true
   }
 }
 ```
@@ -47,7 +47,7 @@ mkdir -p ~/.codex/skills
 cd ~/.codex/skills
 
 # For each skill, create a symlink
-ln -s /path/to/llm-ci-cd-skills/skills/<skill-name> <skill-name>
+ln -s /path/to/llm-ci-dev/skills/<skill-name> <skill-name>
 ```
 
 ### Windows (PowerShell)
@@ -55,7 +55,7 @@ ln -s /path/to/llm-ci-cd-skills/skills/<skill-name> <skill-name>
 ```powershell
 mkdir -Path $env:USERPROFILE\.codex\skills -Force
 
-$skillsRepo = "C:\path\to\llm-ci-cd-skills\skills"
+$skillsRepo = "C:\path\to\llm-ci-dev\skills"
 $codexSkillsDir = "$env:USERPROFILE\.codex\skills"
 
 # For each skill, create a directory junction

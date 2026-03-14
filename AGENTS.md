@@ -16,7 +16,7 @@ Skills work identically in both **Claude Code** and **Codex** without modificati
 ## Repo Layout
 
 ```text
-llm-ci-cd-skills/
+llm-ci-dev/
 ├── .claude-plugin/plugin.json   # Claude Code plugin registration (ignored by Codex)
 ├── linting/                     # Skill linting system (lint-skill.sh, lint-all.sh)
 ├── validation/                  # Skill validation system (rubric, public-references, validate-skill.sh)
