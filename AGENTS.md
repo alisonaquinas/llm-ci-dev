@@ -97,11 +97,26 @@ Remove the entire `skills/<name>/` directory and delete its row from the `README
 
 ---
 
-## Skill Validation
+## Linting and Validation
 
-Run the automated pre-flight before qualitative scoring:
+Before committing any new or modified skill, run:
 
 ```bash
+make lint
+```
+
+When you need a tighter loop for one skill, use:
+
+```bash
+python scripts/lint_skills.py <skill-name>
+python scripts/validate_skills.py <skill-name>
+```
+
+Compatibility wrappers remain available for one release cycle:
+
+```bash
+bash linting/lint-skill.sh skills/<name>
+bash linting/lint-all.sh
 bash validation/validate-skill.sh skills/<name>
 ```
 
@@ -146,6 +161,11 @@ Skills should reflect these 8 standards (from `validation/public-references.md`)
 - Use conventional commits: `feat:`, `fix:`, `docs:`, `refactor:`
 - Scope to the skill name when relevant: `feat(gitlab-docs): add runner autoscaling reference` or `feat(ci-architecture): add blue-green deployment pattern`
 - Do not amend published commits — create new ones.
+- Do not commit without running the baseline quality gate:
+  - `make test`
+  - `make build`
+  - `make verify`
+  - or the narrow Python equivalents when changing one skill in isolation
 
 ---
 
@@ -160,6 +180,7 @@ Before tagging a release, complete these steps in order:
 5. **Push branch and tag**: `git push && git push origin v<version>`.
 
 The `CHANGELOG.md` must always be updated when cutting a release — never tag without it.
+- The release workflow runs `make test`, then `make all`, attaches `built/*.zip`, and skips marketplace dispatch cleanly when the token is absent.
 
 ---
 

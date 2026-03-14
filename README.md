@@ -158,6 +158,32 @@ Deploy, configure, and develop with Kubernetes across the full lifecycle — fro
 | **flux** | ✅ Implemented | Manage GitOps Kubernetes deployments with FluxCD sources and Kustomizations |
 | **argocd** | ✅ Implemented | Deploy Kubernetes apps declaratively with Argo CD applications and projects |
 
+## Build, Test, and Verify
+
+Use GNU Make as the primary local entrypoint:
+
+```bash
+make lint
+make test
+make build
+make verify
+```
+
+Build artifacts land in `built/` as one ZIP per skill. Each archive is rooted at
+`llm-ci-dev/skills/<skill>/...` so release uploads match the repo layout.
+
+The Python helpers are also available directly when you want a narrower run:
+
+```bash
+python scripts/lint_skills.py
+python scripts/validate_skills.py
+python -m unittest discover -s tests -v
+```
+
+Legacy `linting/` and `validation/` shell entrypoints remain available as
+compatibility wrappers for one release cycle, but they now delegate to the
+Python baseline.
+
 ### Container Runtime Skills
 
 Build and run containers with runtimes beyond Docker.

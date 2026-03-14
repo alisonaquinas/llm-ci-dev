@@ -90,6 +90,36 @@ After installation, restart your agent tool:
 
 You should now be able to trigger skills by name (e.g., `$gitlab-docs`, `$github-docs`, `$ci-architecture`).
 
+## Canonical Local Workflow
+
+Use Make as the primary local entrypoint:
+
+```bash
+make lint
+make test
+make build
+make verify
+```
+
+This runs the shared baseline across Markdown, YAML, Python, skill linting,
+skill validation, stdlib-only unit tests, and ZIP verification. Release-ready
+artifacts are written to `built/`.
+
+The Python helpers are also available directly:
+
+```bash
+python scripts/lint_skills.py
+python scripts/validate_skills.py
+```
+
+Legacy shell entrypoints remain available as compatibility shims:
+
+```bash
+bash linting/lint-skill.sh skills/github-ci
+bash linting/lint-all.sh
+bash validation/validate-skill.sh skills/github-ci
+```
+
 ## Troubleshooting
 
 ### Skills not appearing in Claude Code
