@@ -181,7 +181,7 @@ This repo uses **trunk-based development**. The developer works alone.
 
 Before tagging a release, complete these steps in order:
 
-1. **Update `.claude-plugin/plugin.json`** — set `"version"` to match the release tag (e.g., tag `v1.2.0` → `"version": "1.2.0"`).
+1. **Update `.claude-plugin/plugin.json`** — set `"version"` to match the release tag (e.g., tag `v1.2.0` → `"version": "1.2.0"`). **This must be done before tagging.** The release workflow validates that the pushed tag equals `plugin.json version` and aborts with `ERROR: tag v1.2.0 does not match plugin.json version v1.1.3` if they differ.
 2. **Update `CHANGELOG.md`** — rename `## [Unreleased]` to `## [<version>] - <YYYY-MM-DD>` and ensure all changes since the last release are documented under the correct subsections (`### Added`, `### Improved`, `### Fixed`).
 3. **Commit both files** with a `chore(release):` commit: `chore(release): bump to v<version>`.
 4. **Create an annotated tag**: `git tag -a v<version> -m "Release v<version>"`.
