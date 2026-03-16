@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-16
+
+### Added
+
+- `Makefile`: added `bundle` target that packages all built `*-skill.zip` files into a single `ci-cd-plugin.zip` for one-click offline installation; `PLUGIN_NAME := ci-cd` variable drives the output filename
+
+### Fixed
+
+- `Makefile`: restored full Makefile content that was accidentally truncated to zero lines by a patching script; all original targets (`all`, `build`, `clean`, `verify`, `lint`, `test`, `test-unit`, `list`) are preserved
+
+### Changed
+
+- `Makefile`: extended `.PHONY` to include `bundle`; updated `help` text to document the new target
+- `.github/workflows/release.yml`: added "Build plugin bundle ZIP" step (`make bundle`) so `ci-cd-plugin.zip` is uploaded alongside the individual skill ZIPs on every tag release; converted CRLF line endings to LF for yamllint compliance
+
 ## [1.1.4] - 2026-03-16
 
 ### Changed
