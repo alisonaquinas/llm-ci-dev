@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "You are working in the llm-ci-dev skill repository. Prefer AGENTS.md and CLAUDE.md guidance before editing and run targeted quality checks for skill changes."
+          }
+        ]
+      }
+    ]
+  }
+}

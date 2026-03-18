@@ -201,3 +201,32 @@ See `INSTALL.md` for full instructions. The short version:
 into `skills/<name>` in this repo.
 
 **Claude Code** — register this directory as a local plugin source in `~/.claude/settings.json`.
+
+---
+
+## Command + Agent Templates
+
+### Command Templates
+
+```bash
+# Discover and inspect
+rg --files skills
+rg "<pattern>" skills/<skill-name>
+
+# Fast single-skill checks
+python scripts/lint_skills.py <skill-name>
+python scripts/validate_skills.py <skill-name>
+
+# Pre-commit baseline gate
+make test
+make build
+make verify
+```
+
+### Agent Template (CI/CD Domain)
+
+1. Read `skills/<name>/SKILL.md` before editing.
+2. Load only required `references/*.md` from Intent Router.
+3. Keep guidance platform-neutral: use "the agent".
+4. Prefer safe, least-privilege examples and redacted placeholders.
+5. If behavior or description changes, sync agent metadata files.
