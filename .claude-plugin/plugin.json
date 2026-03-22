@@ -1,6 +1,6 @@
 {
   "name": "llm-ci-dev",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Cross-compatible LLM skills for CI/CD pipelines: GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, and deployment workflows.",
   "author": {
     "name": "Alison Aquinas"
