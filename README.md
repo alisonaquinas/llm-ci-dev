@@ -1,5 +1,7 @@
 # llm-ci-dev
 
+Browse and install these skills at [llm-skills.alisonaquinas.com](https://llm-skills.alisonaquinas.com/).
+
 A collection of cross-compatible LLM agent skills for **CI/CD pipeline automation**, extending both
 **Claude Code** and **Codex** with domain-specific knowledge for continuous integration and deployment workflows.
 
