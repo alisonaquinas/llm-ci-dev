@@ -1,0 +1,25 @@
+{
+  "name": "ci-cd",
+  "version": "1.2.3",
+  "description": "Cross-compatible LLM skills for CI/CD pipelines: GitHub Actions, GitLab CI, Jenkins, Docker, Kubernetes, and deployment workflows.",
+  "author": {
+    "name": "Alison Aquinas"
+  },
+  "repository": "https://github.com/alisonaquinas/llm-ci-dev",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CI/CD Skills",
+    "shortDescription": "Skills for pipelines, releases, and delivery automation.",
+    "longDescription": "Cross-compatible skills for CI/CD pipelines, deployment workflows, infrastructure tools, release automation, and platform operations.",
+    "developerName": "Alison Aquinas",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://llm-skills.alisonaquinas.com",
+    "defaultPrompt": [
+      "Use CI/CD Skills to diagnose and improve my pipeline or deployment workflow.",
+      "Use CI/CD Skills to design a safe release, rollback, or automation flow."
+    ],
+    "brandColor": "#059669"
+  }
+}
