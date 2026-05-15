@@ -7,10 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.4] - 2026-05-15
+
 ### Added
 
 - Added `.codex-plugin/plugin.json` so the CI/CD skills bundle can be published through a Codex plugin marketplace.
 - Added `scripts/validate_plugin_manifests.py` and `make codex-bundle` to validate Codex/Claude manifest alignment and build `ci-cd-codex-plugin.zip`.
+- Added back-link to the LLM Skills Marketplace from `README.md`.
+- Added `skills/github-docs/references/advanced-examples.md` indexing matrix strategies, reusable workflows, environments and deployment gates, OIDC with AWS / Azure / GCP / HashiCorp Vault, composite actions, and self-hosted runner autoscaling.
+- Added `skills/gitlab-docs/references/duo-and-ai.md` indexing GitLab Duo, Duo Agent Platform (Planner / Security Analyst / Data Analyst), Duo Chat, Duo Code Review, AI Impact analytics, and self-hosted Duo model routing.
+
+### Changed
+
+- Refreshed `skills/github-docs` for 2025-2026 platform state: dropped the pinned GHES 3.7–3.10 version list in favor of a self-updating `enterprise-server@<version>` placeholder pattern plus a pointer to the canonical supported-release list; added entries for the `case()` expression function, IANA timezone field in `on.schedule.cron`, scoped secrets, OIDC custom property claims, the parallel-steps preview, artifact attestations, and immutable actions.
+- Refreshed `skills/gitlab-docs` for 2025-2026 platform state: replaced hardcoded `/17.x/` version segments with a self-updating `/<version>/` placeholder pattern plus a pointer to the GitLab maintenance policy; added entries for the Duo Agent Platform, fine-grained CI job-token permissions, the CI/CD components catalog with `spec:inputs:`, immutable container tags, protected container repositories, SLSA artifact attestation, and the migration from deprecated `only`/`except` to `rules:`.
+- Rewrote `github-docs` and `gitlab-docs` `SKILL.md` descriptions with explicit `Use this skill … Trigger when the user asks about …` framing so both skills score PASS [APPROVE] on the 8-criterion validation rubric.
 
 ## [1.2.3] - 2026-03-31
 
