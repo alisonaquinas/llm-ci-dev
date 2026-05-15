@@ -21,6 +21,7 @@ Load reference files for depth on specific topics:
 | Site Navigation | `references/navigation.md` | Understanding the docs structure and top-level sections |
 | Quick Reference | `references/quick-reference.md` | Looking up the most frequently needed pages |
 | Actions Reference | `references/actions-reference.md` | Configuring GitHub Actions workflows and workflow syntax |
+| Advanced Examples | `references/advanced-examples.md` | Canonical pages for matrix, reusable workflows, OIDC, environments, composite actions, runner autoscaling |
 | Troubleshooting | `references/troubleshooting.md` | Finding error-specific docs or version-specific information |
 
 ---
@@ -45,7 +46,7 @@ The GitHub docs are organized around these top-level sections:
 2. Start with the appropriate section URL from above
 3. Use WebFetch to load the page and extract relevant details
 4. When the specific page is unknown, load the quick-reference to find the most common pages
-5. For GitHub Enterprise, replace `/en` with `/en/enterprise-server@x.x` in the URL
+5. For GitHub Enterprise Server (GHES), replace `/en` with `/en/enterprise-server@<version>` in the URL — use the version your customer runs. For the currently supported GHES release list, see `https://docs.github.com/en/admin/all-releases`.
 
 ```text
 # Navigate to a specific Actions topic by constructing its URL
@@ -69,4 +70,5 @@ Use WebFetch on https://docs.github.com/en/actions/security-for-github-actions/s
 - Load **Site Navigation** to understand docs.github.com structure and version handling
 - Load **Quick Reference** for the top URLs and most frequently needed documentation pages
 - Load **Actions Reference** for complete workflow syntax, triggers, contexts, and best practices
+- Load **Advanced Examples** for matrix patterns, reusable/composite workflows, OIDC, environments, and runner autoscaling
 - Load **Troubleshooting** when searching for error-specific docs or navigating GitHub Enterprise documentation

@@ -19,14 +19,17 @@ docs.github.com is organized into major product sections. The base URL is `https
 
 ### GitHub Enterprise Support
 
-For GitHub Enterprise Server (GHES), replace `/en` with `/en/enterprise-server@x.x`:
+For GitHub Enterprise Server (GHES), replace `/en` with `/en/enterprise-server@<version>`:
 
 ```text
-https://docs.github.com/en/enterprise-server@3.10/actions/
-https://docs.github.com/en/enterprise-server@3.9/rest/
+https://docs.github.com/en/enterprise-server@<version>/actions/
+https://docs.github.com/en/enterprise-server@<version>/rest/
 ```
 
-Current supported GHES versions: 3.10, 3.9, 3.8, 3.7
+Use the GHES version your customer runs. GitHub typically supports the four most-recent
+minor releases concurrently. The canonical list of supported versions and end-of-life
+dates lives at `https://docs.github.com/en/admin/all-releases` — consult it rather than
+hard-coding versions here.
 
 ### Common Navigation Paths
 

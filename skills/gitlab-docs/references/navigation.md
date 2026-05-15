@@ -24,14 +24,20 @@ GitLab docs support version-specific documentation. The URL pattern is:
 https://docs.gitlab.com/<version>/<path>
 ```
 
-Where `<version>` is the GitLab version (e.g., `17.x`, `16.x`, `15.x`).
+The **current stable** version is served when no version segment is present —
+`https://docs.gitlab.com/ci/yaml/` always points at the latest GA release.
 
-The **current stable** version is shown by default. To access a specific version, insert the version number after the base domain:
+For an older release, insert the matching version segment:
 
 ```text
-https://docs.gitlab.com/17.x/ci/yaml/
-https://docs.gitlab.com/16.x/api/rest/
+https://docs.gitlab.com/<version>/ci/yaml/
+https://docs.gitlab.com/<version>/api/rest/
 ```
+
+GitLab releases a new minor version every month. The canonical supported-release list,
+with release and end-of-life dates, is at
+`https://docs.gitlab.com/ee/policy/maintenance.html`. Consult that page rather than
+hard-coding versions here — the supported set shifts every month.
 
 ### Common Navigation Paths
 

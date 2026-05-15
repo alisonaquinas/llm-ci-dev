@@ -37,6 +37,18 @@ Most-needed GitLab documentation pages with direct URLs.
 | Jobs API | `https://docs.gitlab.com/api/rest/jobs.html` |
 | Merge Requests API | `https://docs.gitlab.com/api/rest/merge_requests.html` |
 
+## Recent Additions (2025–2026)
+
+| Topic | URL |
+| --- | --- |
+| GitLab Duo Agent Platform (GA, agentic workflows) | `https://docs.gitlab.com/user/duo_agent_platform/` |
+| CI/CD components catalog | `https://docs.gitlab.com/ci/components/` |
+| Fine-grained CI job token permissions | `https://docs.gitlab.com/ci/jobs/fine_grained_permissions/` |
+| Pushing commits via CI job token (Git push) | `https://docs.gitlab.com/ci/jobs/ci_job_token/#push-to-the-project-repository` |
+| Duo + SDLC trends dashboard | `https://docs.gitlab.com/user/analytics/ai_impact_analytics/` |
+| Immutable container tags | `https://docs.gitlab.com/user/packages/container_registry/immutable_container_tags/` |
+| Protected container repositories | `https://docs.gitlab.com/user/packages/container_registry/container_repository_protection_rules/` |
+
 ## User & Project Features (Top 5)
 
 | Topic | URL |

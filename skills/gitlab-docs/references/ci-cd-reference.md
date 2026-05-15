@@ -29,7 +29,13 @@ Complete breakdown of the GitLab CI/CD section (docs.gitlab.com/ci/).
 | `timeout` — job timeout | `https://docs.gitlab.com/ci/yaml/#timeout` |
 | `image` — job container image | `https://docs.gitlab.com/ci/yaml/#image` |
 | `services` — service containers | `https://docs.gitlab.com/ci/yaml/#services` |
-| `only` / `except` — deprecated conditionals | `https://docs.gitlab.com/ci/yaml/#only--except` |
+| `only` / `except` — deprecated, migrate to `rules:` | `https://docs.gitlab.com/ci/yaml/#only--except` |
+| Migration: `only`/`except` → `rules:` | `https://docs.gitlab.com/ci/yaml/#rules` |
+| `include` — pipeline composition (local / project / template / remote / component) | `https://docs.gitlab.com/ci/yaml/#include` |
+| `inputs` and `spec:inputs:` — typed inputs for includes/components | `https://docs.gitlab.com/ci/yaml/inputs/` |
+| `trigger:strategy` — wait, depend, mirror, or fire-and-forget child pipelines | `https://docs.gitlab.com/ci/yaml/#triggerstrategy` |
+| `id_tokens` — OIDC ID tokens for jobs | `https://docs.gitlab.com/ci/yaml/#id_tokens` |
+| `hooks:pre_get_sources_script` — script before repo clone | `https://docs.gitlab.com/ci/yaml/#hookspre_get_sources_script` |
 
 ## Pipeline Triggers & Flow
 
@@ -82,6 +88,25 @@ Complete breakdown of the GitLab CI/CD section (docs.gitlab.com/ci/).
 | DAST (Dynamic Application Security Testing) | `https://docs.gitlab.com/user/application_security/dast/` |
 | Secret detection | `https://docs.gitlab.com/user/application_security/secret_detection/` |
 | Infrastructure as Code (IaC) scanning | `https://docs.gitlab.com/user/application_security/iac_scanning/` |
+
+## CI Job Token & Fine-Grained Permissions
+
+| Topic | Documentation URL |
+| --- | --- |
+| CI job token overview | `https://docs.gitlab.com/ci/jobs/ci_job_token/` |
+| Fine-grained job token permissions (granular REST API allowlist) | `https://docs.gitlab.com/ci/jobs/fine_grained_permissions/` |
+| Control job-token access between projects | `https://docs.gitlab.com/ci/jobs/ci_job_token/#control-job-token-access-to-your-project` |
+| Push commits to the project repo via job token | `https://docs.gitlab.com/ci/jobs/ci_job_token/#push-to-the-project-repository` |
+| Migration from registration to authentication tokens for runners | `https://docs.gitlab.com/ci/runners/new_creation_workflow/` |
+
+## Container Registry & Supply Chain
+
+| Topic | Documentation URL |
+| --- | --- |
+| Container registry overview | `https://docs.gitlab.com/user/packages/container_registry/` |
+| Immutable container tags | `https://docs.gitlab.com/user/packages/container_registry/immutable_container_tags/` |
+| Protected container repositories | `https://docs.gitlab.com/user/packages/container_registry/container_repository_protection_rules/` |
+| SLSA build provenance for CI artifacts | `https://docs.gitlab.com/ci/runners/configure_runners/#artifacts-attestation` |
 
 ## Templates & CI/CD Catalog
 

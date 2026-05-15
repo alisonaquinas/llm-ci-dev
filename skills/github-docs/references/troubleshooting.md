@@ -19,6 +19,8 @@ Common error types and how to find docs:
 1. **Self-hosted runner issues** — Start at `https://docs.github.com/en/actions/hosting-your-own-runners/monitoring-and-troubleshooting-self-hosted-runners`
 2. **GitHub-hosted runner timeouts** — Check `https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners` for available runners and limits
 3. **Concurrency constraints** — See `https://docs.github.com/en/actions/using-jobs/using-concurrency` for concurrency group configuration
+4. **Image version drift** — When a workflow breaks after a runner image rolls forward, check `https://github.com/actions/runner-images` for the changelog of the image (e.g. `ubuntu-latest`, `windows-2025`, `macos-15`) and pin to a specific image label if reproducibility matters
+5. **Preview image labels** — `windows-2026` and `macos-26-intel` ship in preview; confirm GA status on the runner-images repo before using them in production workflows
 
 ### Search Strategy
 
@@ -35,28 +37,26 @@ If using GitHub Enterprise Server (GHES):
 
 ### How to Access GHES Documentation
 
-Replace `/en` with `/en/enterprise-server@x.x` in URLs:
+Replace `/en` with `/en/enterprise-server@<version>` in URLs:
 
 ```text
-https://docs.github.com/en/enterprise-server@3.10/actions/
-https://docs.github.com/en/enterprise-server@3.9/rest/
-https://docs.github.com/en/enterprise-server@3.8/actions/
+https://docs.github.com/en/enterprise-server@<version>/actions/
+https://docs.github.com/en/enterprise-server@<version>/rest/
 ```
 
 ### Supported GHES Versions
 
-Current support includes:
-
-- 3.10 (latest)
-- 3.9
-- 3.8
-- 3.7
+GitHub publishes the canonical supported-release list (with release and end-of-life
+dates) at `https://docs.github.com/en/admin/all-releases`. Consult that page rather than
+hard-coding versions — the supported set rotates as new GHES minor releases ship and
+older ones reach end-of-life.
 
 ### Finding Version-Specific Docs
 
-1. Visit `https://docs.github.com/en/enterprise-server@X.X/` (replace X.X with your version)
-2. Look for version selector in top-left corner
-3. Features may differ between versions; always consult your specific version docs
+1. Look up the customer's GHES version (Admin Center → "GitHub Enterprise Server X.Y").
+2. Visit `https://docs.github.com/en/enterprise-server@<version>/` substituting that version.
+3. Use the version selector in the top-left corner to switch between supported versions.
+4. Features may differ between versions; always consult the docs for the version actually running.
 
 ## Community Resources
 

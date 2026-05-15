@@ -89,6 +89,19 @@ Complete breakdown of the GitHub Actions section (docs.github.com/en/actions/).
 | Adding environment protection rules | `https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-protection-rules` |
 | OpenID Connect for deployments | `https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect` |
 
+## Recent Additions (2025–2026)
+
+| Feature | Documentation URL |
+| --- | --- |
+| `case()` expression function (case-insensitive matching) | `https://docs.github.com/en/actions/learn-github-actions/expressions` |
+| `on.schedule.cron` with IANA timezone field | `https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule` |
+| Scoped secrets per environment | `https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions` |
+| OIDC with custom repository properties | `https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect` |
+| Parallel steps inside a job (rolling preview) | `https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions` |
+| Runner image status (image versions, preview labels) | `https://github.com/actions/runner-images` |
+| Artifact attestations (provenance for build outputs) | `https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations/using-artifact-attestations-to-establish-provenance-for-builds` |
+| Immutable actions (publish/consume signed action versions) | `https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations` |
+
 ## Workflow Management & Debugging
 
 | Topic | Documentation URL |

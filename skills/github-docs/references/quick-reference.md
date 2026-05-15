@@ -67,6 +67,16 @@ Most-needed GitHub and GitHub Actions documentation pages with direct URLs.
 | Secret scanning | `https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning` |
 | Vulnerability alerts | `https://docs.github.com/en/code-security/dependabot/dependabot-alerts` |
 
+## Recent Additions (Top 5, 2025–2026)
+
+| Topic | URL |
+| --- | --- |
+| `case()` expression function in Actions | `https://docs.github.com/en/actions/learn-github-actions/expressions` |
+| IANA timezone support in `on.schedule.cron` | `https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule` |
+| Scoped secrets and OIDC custom properties | `https://docs.github.com/en/actions/deployment/security-hardening-your-deployments` |
+| Runner image preview status (windows-2025 stable; windows-2026 preview; macOS 26 Intel) | `https://github.com/actions/runner-images` |
+| Parallel steps within a job (rolling preview) | `https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions` |
+
 ## GitHub Issues & Pull Requests (Top 5)
 
 | Topic | URL |

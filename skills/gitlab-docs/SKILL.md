@@ -21,6 +21,7 @@ Load reference files for depth on specific topics:
 | Site Navigation | `references/navigation.md` | Understanding the docs structure and top-level sections |
 | Quick Reference | `references/quick-reference.md` | Looking up the most frequently needed pages |
 | CI/CD Reference | `references/ci-cd-reference.md` | Configuring GitLab CI/CD pipelines and .gitlab-ci.yml |
+| Duo & AI | `references/duo-and-ai.md` | Looking up GitLab Duo, Duo Agent Platform, Duo Chat, or AI-driven SDLC features |
 | Troubleshooting | `references/troubleshooting.md` | Finding error-specific docs or version-specific information |
 
 ---
@@ -45,7 +46,7 @@ The GitLab docs are organized around these top-level sections:
 2. Start with the appropriate section URL from above
 3. Use WebFetch to load the page and extract relevant details
 4. When the specific page is unknown, load the quick-reference to find the most common pages
-5. For version-specific docs, append `/17.x/` (current version) to the base URL if needed
+5. For version-specific docs, insert `/<version>/` (e.g. the GitLab release number running on the target instance) between the base URL and the path. The canonical list of currently supported releases and end-of-life dates is at `https://docs.gitlab.com/ee/policy/maintenance.html`; docs.gitlab.com without a version segment defaults to the current stable release.
 
 ```text
 # Navigate to a specific CI/CD keyword by constructing its URL
@@ -69,4 +70,5 @@ Use WebFetch on https://docs.gitlab.com/api/rest/users.html to retrieve API endp
 - Load **Site Navigation** to understand docs.gitlab.com structure and version handling
 - Load **Quick Reference** for the top 30 most frequently needed documentation pages
 - Load **CI/CD Reference** for complete .gitlab-ci.yml configuration and pipeline patterns
+- Load **Duo & AI** for GitLab Duo, Duo Agent Platform, Code Suggestions, Duo Chat, and SDLC trends
 - Load **Troubleshooting** when searching for error-specific docs or navigating version-specific pages
