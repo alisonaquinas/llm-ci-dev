@@ -1,8 +1,17 @@
 ---
 name: github-docs
 description: >
-  Look up GitHub and GitHub Actions documentation at docs.github.com/en using WebFetch.
-  Teaches URL patterns, site navigation, and how to fetch specific docs pages.
+  Use this skill to look up GitHub and GitHub Actions documentation at
+  docs.github.com/en using WebFetch. Trigger when the user asks about GitHub
+  Actions workflow syntax, triggers, contexts, expressions, reusable or composite
+  actions, matrix strategies, OIDC, self-hosted runners and autoscaling, runner
+  images, GitHub-hosted runners, environments and deployment gates, GitHub
+  Packages or the container registry, the REST or GraphQL API, code scanning /
+  Dependabot / secret scanning, repository rulesets and branch protection,
+  issues and pull requests, Codespaces, GitHub Pages, or GitHub Enterprise
+  Server documentation. Also trigger for questions like "where is the GitHub
+  doc for X", "find the docs.github.com page on Y", or any request to look
+  something up in GitHub's official documentation.
 ---
 
 # GitHub Docs Lookup

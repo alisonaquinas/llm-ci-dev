@@ -1,8 +1,18 @@
 ---
 name: gitlab-docs
 description: >
-  Look up GitLab documentation at docs.gitlab.com using WebFetch.
-  Teaches URL patterns, site navigation, and how to fetch specific docs pages.
+  Use this skill to look up GitLab documentation at docs.gitlab.com using
+  WebFetch. Trigger when the user asks about GitLab CI/CD pipelines and
+  .gitlab-ci.yml syntax, `rules:` / `needs:` / `extends:` / `trigger:`,
+  CI/CD components and `spec:inputs:`, CI job tokens and fine-grained
+  permissions, runners and executors (Docker, Kubernetes, Shell) and
+  autoscaling, GitLab Duo / Duo Agent Platform / Duo Chat / Duo Code Review,
+  container registry hardening and immutable tags, REST or GraphQL API,
+  merge requests and approvals, protected branches, SAST / DAST / dependency
+  scanning, administration topics, or GitLab self-managed vs SaaS differences.
+  Also trigger for questions like "where is the GitLab doc for X", "find
+  the docs.gitlab.com page on Y", or any request to look something up in
+  GitLab's official documentation.
 ---
 
 # GitLab Docs Lookup
